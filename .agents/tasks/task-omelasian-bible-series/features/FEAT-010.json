@@ -2,7 +2,7 @@
   "id": "FEAT-010",
   "type": "feat",
   "description": "Write Book 9 of 9 (Extension Pack): '오멜라스: 유년기 복음서 (Omelas: Infancy Gospel)' in Korean. A prequel-flavored extension: the 'infancy' of a key figure - e.g., David's early life before World 3.0, or the childhood/origin of another central character or of the first baptized. Deepens origins hinted at in Genesis (Book 2) and closes the series. Consistent with all prior canon. Depends on FEAT-001; complements Book 2 and closes the set.",
-  "status": "pending",
+  "status": "completed",
   "steps": [
     "Create books/09-infancy-gospel/ directory and 00-index.md (Korean).",
     "Write ~5-6 Korean chapters telling an origin/infancy story (e.g., young David, or the first child offered to baptism, echoing the sacrificed child of Le Guin's Omelas) that recontextualizes the main series.",
@@ -22,5 +22,5 @@
     "Spot-read a chapter for Korean prose and consistency."
   ],
   "blocked_reason": null,
-  "findings": ""
+  "findings": "Book 9 (오멜라스: 유년기 복음서 / Infancy Gospel) written in Korean under books/09-infancy-gospel/. Files: 00-index.md (1142자) + 6 chapters. Per-chapter 글자수 (wc -m): chapter-01 2557, chapter-02 2451, chapter-03 2320, chapter-04 2501, chapter-05 2354, chapter-06 1808. Chapters total = 13,991자 (within the 11,000-14,000 target, near the ~12,150 goal). No em dashes anywhere. Story: a prequel/series-closer told through two overlapping childhoods. (1) Young David at nine loses his older brother 준호 to a frozen river in pre-Omelas 강남, which seeds his lifelong fear of death and the 'copy is not the original' intuition (dovetails with Genesis: colleague's death, late wife, dog, the copy-then-delete design, rat/insect migration tests). (2) His daughter 세아 (age twelve, matching Genesis timing) is the FIRST child offered to baptism after David crosses; she questions what happens to the one left behind, refuses, takes off the white robe, and walks away, becoming the hidden 'sacrificed child' echo of Le Guin's Omelas and the first crack in the utopia. Closes on the resonance with Book 7's foreshadowing ('the first child offered to baptism') and its two-riverbanks ending 삼십 년 later. New minor characters/terms introduced (all consistent with canon, none contradicting): 준호 (David's late older brother, drowned in구력 childhood), 별이 (David's old dog / the노견 referenced in Genesis, given the name 별이 here; provides the animal's uncorrupted gaze in the manner of 미르). Canonical continuity checks passed: David migrated when 세아 was twelve; ~30-year gap to New Testament; 구력=pre-Year-Zero; copy-then-delete baptism design; 창건 지성; Le Guin 떠나는 자들 / sacrificed-child motif. No build/test (prose repo). Note: FEAT-009.json was already modified in the working tree by the concurrent Book 8 agent and was left untouched; only book 09 files and FEAT-010.json were staged/committed."
 }
