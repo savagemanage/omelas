@@ -2,7 +2,7 @@
   "id": "FEAT-006",
   "type": "feat",
   "description": "Write Book 5 of 9: '오멜라스: 시편 (Omelas: Psalms)' in Korean. A more lyrical, interior book: a collection of connected chapters that are the songs, prayers, laments, and inner monologues of characters across the factions (an Evangelist's hymn to baptism, an Untransformed mother's lament, a Scientist's cold prayer, a migrated consciousness inside World 3.0 speaking). Provides emotional depth and a breather between action books while advancing character interiority. Depends on FEAT-001; follows Books 1-4.",
-  "status": "pending",
+  "status": "completed",
   "steps": [
     "Create books/05-psalms/ directory and 00-index.md (Korean).",
     "Write ~5-6 Korean chapters, each framed as a psalm/prayer/lament/hymn from a distinct character or faction viewpoint, using more poetic and reflective Korean prose while staying narrative.",
@@ -22,5 +22,5 @@
     "Spot-read a chapter for Korean lyrical prose and continuity."
   ],
   "blocked_reason": null,
-  "findings": ""
+  "findings": "Book 5 (오멜라스: 시편 / Psalms) complete. Created books/05-psalms/ with 00-index.md + 6 Korean chapter files, each a distinct psalm/prayer/lament/hymn voice. Character counts (wc -m): ch01=2156 (이가온's hymn-to-baptism turning to doubt), ch02=1913 (Untransformed mother's lament), ch03=2125 (서명주's cold prayer to a god she doesn't believe in), ch04=2051 (psalm from INSIDE World 3.0, a migrated digital consciousness), ch05=1893 (노아's night prayer / robot-god's lament), ch06=2028 (미르 the dog's silent 'song' + 한서린's closing psalm). Chapter total = 12,166 Korean chars (target ~12,150, range 11,000-14,000). No em dashes (verified via grep). Continuity from Book 4 honored: aftermath of the tribunal, the 'baptism someday' verdict, 이가온's collapsed faith, 노아's promise to open the robot-to-human path with 정도현, 서명주's tribunal testimony (삼백열둘 표본). New minor characters/terms introduced: 서말순 (Seo Malsun, an Untransformed mother, minor) and her son 준서 (Junseo, baptized then migrated; voices the World 3.0 psalm in ch04 and appears at the mother's table in ch02). No new canonical terms; all glossary terms used as fixed. Book closes by handing the core questions (열반 vs 소멸, robot-to-human) forward to Book 6 (잠언). No build/test system (prose repo); verification is file-existence + wc -m + em-dash grep, all passing."
 }
