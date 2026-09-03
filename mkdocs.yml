@@ -1,0 +1,48 @@
+site_name: 오멜라스 성서 (Omelasian Bible)
+
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: ko
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로 전환
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로 전환
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - tables
+  - attr_list
+
+exclude_docs: |
+  .agents/
+  .git/
+  site/
+
+nav:
+  - Home: index.md
+  - 요한계시록 (Revelation): books/01-revelation/00-index.md
+  - 창세기 (Genesis): books/02-genesis/00-index.md
+  - 출애굽기 (Exodus): books/03-exodus/00-index.md
+  - 사사기 (Judges): books/04-judges/00-index.md
+  - 시편 (Psalms): books/05-psalms/00-index.md
+  - 잠언 (Proverbs): books/06-proverbs/00-index.md
+  - 신약 (New Testament): books/07-new-testament/00-index.md
+  - 아크로피아 (Acrophyia): books/08-acrophyia/00-index.md
+  - 유년기 복음서 (Infancy Gospel): books/09-infancy-gospel/00-index.md

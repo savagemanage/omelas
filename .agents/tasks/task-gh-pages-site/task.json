@@ -1,0 +1,7 @@
+{
+  "task_id": "task-gh-pages-site",
+  "task_description": "Configure the Omelasian Bible repo (savagemanage/omelas) so it can be deployed to GitHub Pages, with all 9 Korean-language books and their 54 chapters browsable from the site. Approach: MkDocs + Material theme (renders Korean, resolves relative .md links natively, needs no front-matter so prose stays untouched), built and deployed via a GitHub Actions Pages workflow. Do not modify novel prose or English originals; do not push or open PRs (orchestrator publishes; workflow files go via PR).",
+  "status": "in_progress",
+  "feature_order": ["FEAT-001", "FEAT-002", "FEAT-003"],
+  "blocked_reason": null
+}

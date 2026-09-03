@@ -1,0 +1,28 @@
+{
+  "id": "FEAT-003",
+  "type": "chore",
+  "description": "Add the GitHub Pages deployment mechanism (GitHub Actions workflow that builds with MkDocs and deploys to Pages) and documentation (DEPLOY.md) explaining how to enable Pages and how deploys happen. Depends on FEAT-001/002 (needs a buildable site). The workflow file will be delivered via PR by the orchestrator (workflow files cannot be pushed to default branch directly).",
+  "status": "pending",
+  "steps": [
+    "Create .github/workflows/pages.yml: trigger on push to main (and workflow_dispatch). Use permissions: {contents: read, pages: write, id-token: write}, concurrency group 'pages'. Job 'build' on ubuntu-latest: checkout, setup-python 3.x, `pip install -r requirements.txt`, `mkdocs build --strict`, then upload ./site with actions/upload-pages-artifact. Job 'deploy' needs 'build', uses environment github-pages and actions/deploy-pages@v4. Use current stable action versions (actions/checkout@v4, actions/setup-python@v5, actions/configure-pages@v5, actions/upload-pages-artifact@v3, actions/deploy-pages@v4).",
+    "If mkdocs.yml lacks site_url, add one referencing the expected Pages URL (https://savagemanage.github.io/omelas/) so canonical links and sitemap are correct. Do not hardcode secrets.",
+    "Create DEPLOY.md at repo root documenting: (a) the chosen approach (MkDocs Material + GitHub Actions -> GitHub Pages) and why; (b) the manual one-time step the repo owner must take: Settings -> Pages -> Build and deployment -> Source = 'GitHub Actions'; (c) how automatic deploys happen (push to main triggers pages.yml); (d) how to build/preview locally (`pip install -r requirements.txt`, `mkdocs serve`, open http://127.0.0.1:8000, `mkdocs build` for output in ./site); (e) note that workflow files are delivered via PR. Use no em dashes.",
+    "Optionally add a short section to README.md ONLY IF it does not alter existing English canon text; prefer putting all deploy docs in DEPLOY.md to avoid touching the English original. Do NOT modify existing README.md content (story bible rule 8 forbids editing English originals).",
+    "Validate the workflow YAML parses (e.g., `python3 -c \"import yaml,sys; yaml.safe_load(open('.github/workflows/pages.yml'))\"`) and re-run `mkdocs build --strict` to confirm nothing regressed."
+  ],
+  "acceptance_criteria": [
+    ".github/workflows/pages.yml exists, is valid YAML, builds with mkdocs and deploys via actions/deploy-pages with correct pages permissions.",
+    "DEPLOY.md exists and documents enabling Pages (Source = GitHub Actions), the deploy trigger, and local preview/build commands.",
+    "mkdocs.yml has a site_url set to the expected Pages URL.",
+    "`python3 -m mkdocs build --strict` still exits 0.",
+    "README.md, ideation.md, page-1.md and all novel prose remain unmodified."
+  ],
+  "verification": [
+    "python3 -c \"import yaml; yaml.safe_load(open('.github/workflows/pages.yml')); print('yaml ok')\"",
+    "python3 -m mkdocs build --strict",
+    "test -f DEPLOY.md",
+    "git status --porcelain README.md ideation.md page-1.md books canon  (must be empty)"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}
