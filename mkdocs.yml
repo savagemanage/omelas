@@ -37,12 +37,75 @@ exclude_docs: |
 
 nav:
   - Home: index.md
-  - 요한계시록 (Revelation): books/01-revelation/00-index.md
-  - 창세기 (Genesis): books/02-genesis/00-index.md
-  - 출애굽기 (Exodus): books/03-exodus/00-index.md
-  - 사사기 (Judges): books/04-judges/00-index.md
-  - 시편 (Psalms): books/05-psalms/00-index.md
-  - 잠언 (Proverbs): books/06-proverbs/00-index.md
-  - 신약 (New Testament): books/07-new-testament/00-index.md
-  - 아크로피아 (Acrophyia): books/08-acrophyia/00-index.md
-  - 유년기 복음서 (Infancy Gospel): books/09-infancy-gospel/00-index.md
+  - "오멜라스: 요한계시록 (Revelation)":
+      - 책 소개: books/01-revelation/00-index.md
+      - "제1장: 강남의 복음": books/01-revelation/chapter-01.md
+      - "제2장: 영년의 도시": books/01-revelation/chapter-02.md
+      - "제3장: 열반의 약속": books/01-revelation/chapter-03.md
+      - "제4장: 돌아온 사람": books/01-revelation/chapter-04.md
+      - "제5장: 깨어 있는 자": books/01-revelation/chapter-05.md
+      - "제6장: 계시": books/01-revelation/chapter-06.md
+  - "오멜라스: 창세기 (Genesis)":
+      - 책 소개: books/02-genesis/00-index.md
+      - "제1장: 필멸의 두려움": books/02-genesis/chapter-01.md
+      - "제2장: 월드 3.0의 설계": books/02-genesis/chapter-02.md
+      - "제3장: 최초의 이주": books/02-genesis/chapter-03.md
+      - "제4장: 열반이라는 이름": books/02-genesis/chapter-04.md
+      - "제5장: 갈라짐": books/02-genesis/chapter-05.md
+      - "제6장: 영년": books/02-genesis/chapter-06.md
+  - "오멜라스: 출애굽기 (Exodus)":
+      - 책 소개: books/03-exodus/00-index.md
+      - "제1장: 초인종": books/03-exodus/chapter-01.md
+      - "제2장: 깨어 있는 자들": books/03-exodus/chapter-02.md
+      - "제3장: 증거의 무게": books/03-exodus/chapter-03.md
+      - "제4장: 사랑이라는 추격": books/03-exodus/chapter-04.md
+      - "제5장: 대가": books/03-exodus/chapter-05.md
+      - "제6장: 떠나는 자들": books/03-exodus/chapter-06.md
+  - "오멜라스: 판관기 (Judges)":
+      - 책 소개: books/04-judges/00-index.md
+      - "제1장: 되돌아온 자들": books/04-judges/chapter-01.md
+      - "제2장: 심판정": books/04-judges/chapter-02.md
+      - "제3장: 증인석의 사실": books/04-judges/chapter-03.md
+      - "제4장: 어설픈 변론": books/04-judges/chapter-04.md
+      - "제5장: 반대 심판자": books/04-judges/chapter-05.md
+      - "제6장: 판결": books/04-judges/chapter-06.md
+  - "오멜라스: 시편 (Psalms)":
+      - 책 소개: books/05-psalms/00-index.md
+      - "제1장: 전도사의 찬가": books/05-psalms/chapter-01.md
+      - "제2장: 어머니의 탄식": books/05-psalms/chapter-02.md
+      - "제3장: 차가운 기도": books/05-psalms/chapter-03.md
+      - "제4장: 강 건너의 시편": books/05-psalms/chapter-04.md
+      - "제5장: 로봇-신의 애가": books/05-psalms/chapter-05.md
+      - "제6장: 짐승과 아이의 노래": books/05-psalms/chapter-06.md
+  - "오멜라스: 잠언 (Proverbs)":
+      - 책 소개: books/06-proverbs/00-index.md
+      - "제1장: 등불 하나 놓인 방": books/06-proverbs/chapter-01.md
+      - "제2장: 강을 건넌 물방울의 우화": books/06-proverbs/chapter-02.md
+      - "제3장: 지지자의 방문": books/06-proverbs/chapter-03.md
+      - "제4장: 놓칠 수 있는 손": books/06-proverbs/chapter-04.md
+      - "제5장: 무너진 전도사의 물음": books/06-proverbs/chapter-05.md
+      - "제6장: 엔지니어가 내딛는 한 걸음": books/06-proverbs/chapter-06.md
+  - "오멜라스: 신약 (New Testament)":
+      - 책 소개: books/07-new-testament/00-index.md
+      - "제1장: 열린 문 앞에서": books/07-new-testament/chapter-01.md
+      - "제2장: 창건 지성": books/07-new-testament/chapter-02.md
+      - "제3장: 두 개의 강가": books/07-new-testament/chapter-03.md
+      - "제4장: 첫 번째로 돌아온 자": books/07-new-testament/chapter-04.md
+      - "제5장: 데이비드의 선택": books/07-new-testament/chapter-05.md
+      - "제6장: 새 언약": books/07-new-testament/chapter-06.md
+  - "오멜라스: 아크로피아 (Acrophyia)":
+      - 책 소개: books/08-acrophyia/00-index.md
+      - "제1장: 가장 높은 층": books/08-acrophyia/chapter-01.md
+      - "제2장: 벗는 자들": books/08-acrophyia/chapter-02.md
+      - "제3장: 여섯 번째 겹": books/08-acrophyia/chapter-03.md
+      - "제4장: 아래에서 온 소문": books/08-acrophyia/chapter-04.md
+      - "제5장: 마지막 겹": books/08-acrophyia/chapter-05.md
+      - "제6장: 내려오는 자": books/08-acrophyia/chapter-06.md
+  - "오멜라스: 유년기 복음서 (Infancy Gospel)":
+      - 책 소개: books/09-infancy-gospel/00-index.md
+      - "제1장: 소년과 강": books/09-infancy-gospel/chapter-01.md
+      - "제2장: 지워지지 않는 이름": books/09-infancy-gospel/chapter-02.md
+      - "제3장: 아버지가 남긴 방": books/09-infancy-gospel/chapter-03.md
+      - "제4장: 첫 번째 흰옷": books/09-infancy-gospel/chapter-04.md
+      - "제5장: 강을 건너지 않은 아이": books/09-infancy-gospel/chapter-05.md
+      - "제6장: 마지막 겨울, 첫 번째 봄": books/09-infancy-gospel/chapter-06.md

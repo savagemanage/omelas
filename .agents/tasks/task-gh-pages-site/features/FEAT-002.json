@@ -2,7 +2,7 @@
   "id": "FEAT-002",
   "type": "feat",
   "description": "Build the full browsable navigation so ALL nine books and their 54 chapters are viewable from the site, with a clear landing page listing every book. Depends on FEAT-001 (needs the working mkdocs.yml). This is the core of the user request: '모든 책을 볼 수 있게' (so all books can be viewed).",
-  "status": "pending",
+  "status": "completed",
   "steps": [
     "Create a dedicated site landing page that lists all 9 books with links to each book index. Prefer a new file that does NOT touch prose: create `docs_home.md` (or `index.md`) at repo root containing an H1 title and a Korean list linking to each books/NN-*/00-index.md. If you introduce index.md at repo root, ensure it does not collide with README.md; set it as the nav Home. Keep English originals untouched.",
     "In mkdocs.yml, write a complete explicit `nav:` tree: Home -> the new landing page; then one section per book (9 sections) titled with the book's Korean+English title (e.g., '오멜라스: 요한계시록 (Revelation)'), each section listing its 00-index.md ('책 소개' or the book title) followed by chapter-01.md .. chapter-06.md labeled '제1장'..'제6장'. Derive titles from each file's H1 if practical, otherwise use the chapter numbers.",
@@ -25,5 +25,5 @@
     "git status --porcelain books canon README.md ideation.md page-1.md  (must be empty)"
   ],
   "blocked_reason": null,
-  "findings": ""
+  "findings": "Created new file docs_home.md at repo root (Korean landing page with H1 + numbered list linking to all 9 book 00-index.md). Updated scripts/build_docs_tree.py so docs/index.md symlinks to docs_home.md instead of README.md, leaving README.md byte-identical. Wrote a complete explicit nav in mkdocs.yml: Home + 9 book sections, each with '책 소개' (00-index) plus 6 chapters labeled with their actual H1 chapter titles (54 chapters total). Chapter labels quoted because they contain colons. Build workflow: `python3 scripts/build_docs_tree.py` then `python3 -m mkdocs build --strict` -> exit 0, no MkDocs warnings (only the mkdocs-material team's informational MkDocs 2.0 banner prints, which is not a build warning and does not fail --strict). Verified site/ has 54 chapter pages (site/books/<b>/chapter-NN/index.html) + 9 book index pages + home index.html; home links to book indexes; relative .md links in book indexes resolve to page URLs (e.g. ../chapter-01/); <html lang=\"ko\"> present. git status --porcelain for books/canon/README.md/ideation.md/page-1.md is empty (no protected files touched). docs/ and site/ remain gitignored. No em dashes in new content."
 }

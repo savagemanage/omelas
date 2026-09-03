@@ -25,9 +25,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS_DIR = REPO_ROOT / "docs"
 
 # Top-level entries to expose in the site, mapped to their name inside docs/.
-# README.md becomes the landing page index.md so Home renders at the site root.
+# docs_home.md is a dedicated Korean landing page listing every book; it becomes
+# index.md so Home renders at the site root without touching the English README.
 LINKS = {
-    "README.md": "index.md",
+    "docs_home.md": "index.md",
     "books": "books",
 }
 
