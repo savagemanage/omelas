@@ -2,7 +2,7 @@
   "id": "FEAT-003",
   "type": "chore",
   "description": "Add the GitHub Pages deployment mechanism (GitHub Actions workflow that builds with MkDocs and deploys to Pages) and documentation (DEPLOY.md) explaining how to enable Pages and how deploys happen. Depends on FEAT-001/002 (needs a buildable site). The workflow file will be delivered via PR by the orchestrator (workflow files cannot be pushed to default branch directly).",
-  "status": "pending",
+  "status": "completed",
   "steps": [
     "Create .github/workflows/pages.yml: trigger on push to main (and workflow_dispatch). Use permissions: {contents: read, pages: write, id-token: write}, concurrency group 'pages'. Job 'build' on ubuntu-latest: checkout, setup-python 3.x, `pip install -r requirements.txt`, `mkdocs build --strict`, then upload ./site with actions/upload-pages-artifact. Job 'deploy' needs 'build', uses environment github-pages and actions/deploy-pages@v4. Use current stable action versions (actions/checkout@v4, actions/setup-python@v5, actions/configure-pages@v5, actions/upload-pages-artifact@v3, actions/deploy-pages@v4).",
     "If mkdocs.yml lacks site_url, add one referencing the expected Pages URL (https://savagemanage.github.io/omelas/) so canonical links and sitemap are correct. Do not hardcode secrets.",
@@ -24,5 +24,5 @@
     "git status --porcelain README.md ideation.md page-1.md books canon  (must be empty)"
   ],
   "blocked_reason": null,
-  "findings": ""
+  "findings": "Created .github/workflows/pages.yml (build+deploy jobs; checkout@v4, setup-python@v5, configure-pages@v5, upload-pages-artifact@v3, deploy-pages@v4; permissions contents:read/pages:write/id-token:write; concurrency group 'pages'; triggers push:main + workflow_dispatch). Workflow runs `python3 scripts/build_docs_tree.py` BEFORE `python3 -m mkdocs build --strict` since docs/ is a generated symlink tree (required per FEAT-001/002). Added site_url: https://savagemanage.github.io/omelas/ to mkdocs.yml; confirmed generated site/index.html contains the correct canonical URL. Created DEPLOY.md (Korean) covering approach, one-time Settings->Pages->Source=GitHub Actions step, auto deploy trigger, local preview/build commands, and PR-delivery note. Verification: `python3 -c import yaml; yaml.safe_load(...)` = yaml ok; `python3 -m mkdocs build --strict` exit 0 (Material's MkDocs 2.0 informational notice is not an error); all 9 books present in site/books; no em dashes; protected paths (books, canon, README.md, ideation.md, page-1.md) unmodified. Did not push or open PR per constraints; workflow file to be delivered via PR by orchestrator."
 }

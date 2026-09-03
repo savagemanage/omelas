@@ -1,4 +1,5 @@
 site_name: 오멜라스 성서 (Omelasian Bible)
+site_url: https://savagemanage.github.io/omelas/
 
 docs_dir: docs
 site_dir: site
