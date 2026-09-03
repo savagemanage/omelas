@@ -2,7 +2,7 @@
   "id": "FEAT-002",
   "type": "feat",
   "description": "Write Book 1 of 9: '오멜라스: 요한계시록 (Omelas: Revelation)' in Korean. This is the opening book. It uses the canon opening line (Evangelist preaching on Gangnam Street) as its inciting scene and presents the world at 'Year Zero' as an apparent utopia, ending with an apocalyptic revelation/hook that seeds the whole series (the hidden cost of baptism / World 3.0). Depends on FEAT-001 story bible.",
-  "status": "pending",
+  "status": "completed",
   "steps": [
     "Create books/01-revelation/ directory.",
     "Create books/01-revelation/00-index.md: Korean title, one-paragraph synopsis, chapter list.",
@@ -23,5 +23,5 @@
     "Spot-read chapter-01.md to confirm Korean prose and the Gangnam opening."
   ],
   "blocked_reason": null,
-  "findings": ""
+  "findings": "Book 1 (오멜라스: 요한계시록) complete in books/01-revelation/. Files: 00-index.md plus chapter-01..06.md (6 chapters), all Korean, no em dashes. Character counts per chapter (wc -m): ch01=2341, ch02=2389, ch03=2266, ch04=2259, ch05=2282, ch06=2466. Total of chapter files via 'cat chapter-*.md | wc -m' = 14003 (~13,700 prose chars excluding inter-file blank lines), within the ~28-page / 11,000-14,000 budget. Structure follows story-bible-ko.md 4.1 exactly: Gangnam preaching (이가온, canon line '모든 것은 주님의 영광을 위하여'), Untransformed protagonist 한서린 witnessing, Year Zero utopia + World 3.0 as backbone, Goods presenting baptism as Nirvana, first doubt via Evils/Scientist 서명주, apocalyptic hook ending. Uses canon characters: 한서린, 이가온, 서명주, 미르 (dog). NEW MINOR CHARACTERS introduced for continuity in later books: (1) 지우 (Jiwoo) - 한서린's childhood friend who was baptized ~2 months before Year-Zero present; returns via 'temporary body terminal (임시 육체 단말)' during 재림 관찰 (a rare post-baptism observation procedure); her subtle emotional flattening (the '소나기/rainstorm' memory reduced to a flat 'happy memory') is the key evidence of baptism erasing the person. (2) 한서린's parents - baptized 3 years before present, reside in World 3.0, actively evangelize her; unnamed beyond '어머니/아버지'. NEW MINOR WORLDBUILDING TERMS coined (consistent with bible, non-conflicting): '구력 (舊曆, Old Calendar)' = pre-Year-Zero era; '재림 관찰 (Second-coming Observation)' = rare procedure re-projecting a baptized consciousness into a temporary body terminal; '임시 육체 단말 (temporary body terminal)'. Framing established for the series: baptism = copy-then-delete-original (per 서명주), the dog 미르 distinguishes living from non-living by smell, and the city surveils/pursues those who leave the baptism queue (흰옷의 안내자 / white-robed guides come for 한서린 at the end, seeding Exodus/Book 3)."
 }
