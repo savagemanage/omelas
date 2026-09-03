@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-004",
+  "type": "feat",
+  "description": "Write Book 3 of 9: '오멜라스: 출애굽기 (Omelas: Exodus)' in Korean. The Untransformed protagonist and the Evils, having learned the hidden truth about what baptism does to people, attempt to flee the Mechanical Utopia / escape the reach of World 3.0. A journey-and-pursuit book echoing Le Guin's 'ones who walk away from Omelas.' Depends on FEAT-001; follows FEAT-002 and FEAT-003.",
+  "status": "pending",
+  "steps": [
+    "Create books/03-exodus/ directory and 00-index.md (Korean).",
+    "Write ~5-6 Korean chapters: the resistance forms, they gather proof against baptism (with Scientists), the Evangelists and Engineers hunt them, and a group chooses to 'walk away' from the utopia. Include moral cost and losses.",
+    "Introduce/deepen the theme of walking away from Omelas explicitly, tied to the canon Le Guin inspiration.",
+    "Follow canon/story-bible-ko.md for names, terms, and continuity from Books 1-2.",
+    "Target ~27-28 pages (~12,000-13,000 Korean characters)."
+  ],
+  "acceptance_criteria": [
+    "books/03-exodus/ contains 00-index.md and >=5 Korean chapter files.",
+    "Story is a continuous continuation of Books 1-2 and consistent with story bible.",
+    "Total ~12,000-13,000 Korean characters.",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/03-exodus/ and confirm files exist.",
+    "Run: cat books/03-exodus/chapter-*.md | wc -m and confirm ~11,000-14,000 characters.",
+    "Spot-read a chapter for Korean prose and continuity."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

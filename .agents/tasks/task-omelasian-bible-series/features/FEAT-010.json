@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-010",
+  "type": "feat",
+  "description": "Write Book 9 of 9 (Extension Pack): '오멜라스: 유년기 복음서 (Omelas: Infancy Gospel)' in Korean. A prequel-flavored extension: the 'infancy' of a key figure - e.g., David's early life before World 3.0, or the childhood/origin of another central character or of the first baptized. Deepens origins hinted at in Genesis (Book 2) and closes the series. Consistent with all prior canon. Depends on FEAT-001; complements Book 2 and closes the set.",
+  "status": "pending",
+  "steps": [
+    "Create books/09-infancy-gospel/ directory and 00-index.md (Korean).",
+    "Write ~5-6 Korean chapters telling an origin/infancy story (e.g., young David, or the first child offered to baptism, echoing the sacrificed child of Le Guin's Omelas) that recontextualizes the main series.",
+    "Ensure it dovetails with Genesis (Book 2) without contradiction and provides a resonant final note for the whole series.",
+    "Follow canon/story-bible-ko.md.",
+    "Target ~27-28 pages (~12,000-13,000 Korean characters)."
+  ],
+  "acceptance_criteria": [
+    "books/09-infancy-gospel/ contains 00-index.md and >=5 Korean chapter files.",
+    "Origin/infancy story consistent with Genesis and the full canon.",
+    "Total ~12,000-13,000 Korean characters.",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/09-infancy-gospel/ and confirm files exist.",
+    "Run: cat books/09-infancy-gospel/chapter-*.md | wc -m and confirm ~11,000-14,000 characters.",
+    "Spot-read a chapter for Korean prose and consistency."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

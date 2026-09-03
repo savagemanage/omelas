@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-006",
+  "type": "feat",
+  "description": "Write Book 5 of 9: '오멜라스: 시편 (Omelas: Psalms)' in Korean. A more lyrical, interior book: a collection of connected chapters that are the songs, prayers, laments, and inner monologues of characters across the factions (an Evangelist's hymn to baptism, an Untransformed mother's lament, a Scientist's cold prayer, a migrated consciousness inside World 3.0 speaking). Provides emotional depth and a breather between action books while advancing character interiority. Depends on FEAT-001; follows Books 1-4.",
+  "status": "pending",
+  "steps": [
+    "Create books/05-psalms/ directory and 00-index.md (Korean).",
+    "Write ~5-6 Korean chapters, each framed as a psalm/prayer/lament/hymn from a distinct character or faction viewpoint, using more poetic and reflective Korean prose while staying narrative.",
+    "Include at least one 'psalm' voiced from inside World 3.0 (a digital consciousness) to deepen the metaphysics.",
+    "Keep continuity of characters and events from Books 1-4 per canon/story-bible-ko.md.",
+    "Target ~27-28 pages (~12,000-13,000 Korean characters)."
+  ],
+  "acceptance_criteria": [
+    "books/05-psalms/ contains 00-index.md and >=5 Korean chapter files in a lyrical/psalm form.",
+    "At least one chapter is voiced from within World 3.0; consistent with canon.",
+    "Total ~12,000-13,000 Korean characters.",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/05-psalms/ and confirm files exist.",
+    "Run: cat books/05-psalms/chapter-*.md | wc -m and confirm ~11,000-14,000 characters.",
+    "Spot-read a chapter for Korean lyrical prose and continuity."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

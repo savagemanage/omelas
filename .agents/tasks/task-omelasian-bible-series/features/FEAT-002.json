@@ -1,0 +1,27 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Write Book 1 of 9: '오멜라스: 요한계시록 (Omelas: Revelation)' in Korean. This is the opening book. It uses the canon opening line (Evangelist preaching on Gangnam Street) as its inciting scene and presents the world at 'Year Zero' as an apparent utopia, ending with an apocalyptic revelation/hook that seeds the whole series (the hidden cost of baptism / World 3.0). Depends on FEAT-001 story bible.",
+  "status": "pending",
+  "steps": [
+    "Create books/01-revelation/ directory.",
+    "Create books/01-revelation/00-index.md: Korean title, one-paragraph synopsis, chapter list.",
+    "Open the book on Gangnam Street expanding the canon line in canon/page-1-ko.md (전도사가 미변환자들에게 세례를 외치는 장면). Introduce the Untransformed protagonist witnessing it.",
+    "Write chapters (aim ~5-6 chapters) as books/01-revelation/chapter-01.md ... chapter-NN.md, each Korean prose. Introduce World 3.0 as the celebrated backbone of the Mechanical Utopia, the Goods presenting baptism as reaching Nirvana, and plant the first crack of doubt via an Evils/Scientist figure. End on a revelatory hook.",
+    "Follow terminology, character names, and the Book-1 synopsis fixed in canon/story-bible-ko.md exactly.",
+    "Target ~27-28 pages total (~12,000-13,000 Korean characters) distributed across the chapters."
+  ],
+  "acceptance_criteria": [
+    "books/01-revelation/ contains 00-index.md and >=5 chapter-NN.md files, all in Korean.",
+    "Content is consistent with canon/story-bible-ko.md (names, terms, arc) and opens with the Gangnam Street Evangelist scene.",
+    "Total Korean character count for this book is ~12,000-13,000 (roughly 27-28 pages).",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/01-revelation/ and confirm 00-index.md plus chapter files exist.",
+    "Run: cat books/01-revelation/chapter-*.md | wc -m and confirm total is ~11,000-14,000 characters.",
+    "Spot-read chapter-01.md to confirm Korean prose and the Gangnam opening."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

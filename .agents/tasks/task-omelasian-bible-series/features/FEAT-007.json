@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-007",
+  "type": "feat",
+  "description": "Write Book 6 of 9: '오멜라스: 잠언 (Omelas: Proverbs)' in Korean. A wisdom/ideas book: through debates, parables, and teaching scenes, the philosophical core is argued out - is becoming a machine truly Nirvana, or annihilation dressed as salvation? Is making robots human the greater good? Features the doubting Engineer and the robot-Good as central voices, moving several characters toward their final choices. Depends on FEAT-001; follows Books 1-5.",
+  "status": "pending",
+  "steps": [
+    "Create books/06-proverbs/ directory and 00-index.md (Korean).",
+    "Write ~5-6 Korean chapters built around proverbs/parables and philosophical dialogue between factions, dramatized (not dry essays). Center the machine-as-Nirvana vs machine-as-death debate and the robot-to-human counter-doctrine.",
+    "Push the doubting Engineer toward a decisive turn that sets up the finale.",
+    "Follow canon/story-bible-ko.md for continuity.",
+    "Target ~27-28 pages (~12,000-13,000 Korean characters)."
+  ],
+  "acceptance_criteria": [
+    "books/06-proverbs/ contains 00-index.md and >=5 Korean chapter files.",
+    "Dramatizes the central philosophical debate consistent with canon and advances character arcs.",
+    "Total ~12,000-13,000 Korean characters.",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/06-proverbs/ and confirm files exist.",
+    "Run: cat books/06-proverbs/chapter-*.md | wc -m and confirm ~11,000-14,000 characters.",
+    "Spot-read a chapter for Korean prose and continuity."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

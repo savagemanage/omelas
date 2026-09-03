@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-008",
+  "type": "feat",
+  "description": "Write Book 7 of 9: '오멜라스: 신약 (Omelas: The New Testament)' in Korean. The climax and resolution of the Regular Pack: the arcs converge, a new covenant or transformation of the World 3.0 order emerges (e.g., the robot-to-human path, the fall or redemption of David, the fate of the ones who walked away). Delivers the series' thematic payoff about utopia and sacrifice. Depends on FEAT-001; is the finale of Books 1-6.",
+  "status": "pending",
+  "steps": [
+    "Create books/07-new-testament/ directory and 00-index.md (Korean).",
+    "Write ~6 Korean chapters bringing the main plot to a climax and resolution: confrontation over World 3.0, the decisive choice about baptism vs a new 'covenant', the fates of David and the core recurring characters, and a thematically resonant ending consistent with the Le Guin inspiration.",
+    "Resolve or deliberately leave open the threads that the Extension Pack (Books 8-9) will explore.",
+    "Follow canon/story-bible-ko.md for full continuity.",
+    "Target ~27-28 pages (~12,000-13,000 Korean characters)."
+  ],
+  "acceptance_criteria": [
+    "books/07-new-testament/ contains 00-index.md and >=5 Korean chapter files.",
+    "Provides a climactic resolution consistent with all prior books and canon.",
+    "Total ~12,000-13,000 Korean characters.",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/07-new-testament/ and confirm files exist.",
+    "Run: cat books/07-new-testament/chapter-*.md | wc -m and confirm ~11,000-14,000 characters.",
+    "Spot-read a chapter for Korean prose and continuity."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}
