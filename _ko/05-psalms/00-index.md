@@ -4,10 +4,10 @@ layout: "book"
 book: "05-psalms"
 book_num: 5
 chapter: 0
-title: "오멜라스: 시편 (Omelas: Psalms)"
+title: "오멜라스: 시편"
 translation_key: "05-psalms/00-index"
 ---
-# 오멜라스: 시편 (Omelas: Psalms)
+# 오멜라스: 시편
 
 ## 시놉시스
 

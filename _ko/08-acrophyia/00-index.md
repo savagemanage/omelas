@@ -4,12 +4,12 @@ layout: "book"
 book: "08-acrophyia"
 book_num: 8
 chapter: 0
-title: "오멜라스: 아크로피아 (Omelas: Acrophyia)"
+title: "오멜라스: 아크로피아"
 translation_key: "08-acrophyia/00-index"
 ---
-# 오멜라스: 아크로피아 (Omelas: Acrophyia)
+# 오멜라스: 아크로피아
 
-> 확장 팩의 첫 번째 외전. 본편 아크(1~7권) 바깥으로 세계를 넓히되 그것과 모순되지 않는 자립적 이야기.
+> 첫 번째 외전. 본편 아크(1~7권) 바깥으로 세계를 넓히되 그것과 모순되지 않는 자립적 이야기.
 
 ## 시놉시스
 

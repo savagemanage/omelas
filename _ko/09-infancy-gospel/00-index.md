@@ -4,12 +4,12 @@ layout: "book"
 book: "09-infancy-gospel"
 book_num: 9
 chapter: 0
-title: "오멜라스: 유년기 복음서 (Omelas: Infancy Gospel)"
+title: "오멜라스: 유년기 복음서"
 translation_key: "09-infancy-gospel/00-index"
 ---
-# 오멜라스: 유년기 복음서 (Omelas: Infancy Gospel)
+# 오멜라스: 유년기 복음서
 
-> 확장 팩의 마지막 책.
+> 외전의 마지막 책.
 > 창세기(2권)와 모순 없이 맞물리는 전사(前史)이며, 시리즈 전체에 울림 있는 마침표를 찍는다.
 
 ## 시놉시스
