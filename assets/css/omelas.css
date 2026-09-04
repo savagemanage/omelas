@@ -395,3 +395,117 @@ blockquote p {
 .omelas-langchoice a {
   margin: 0 0.5rem;
 }
+
+/*
+  Language-choice gate: the front-and-center first-entry point of the site. Two
+  prominent "doors" let the reader pick 한국어 or English and step into that
+  reading tree. Each door is a plain anchor so the gate works with no JS. The
+  doors pick up the same aged-gold accent and ink-on-vellum palette as the rest
+  of the scripture theme.
+*/
+.omelas-cover--gate {
+  margin-bottom: 1.75rem;
+}
+
+.omelas-gate {
+  margin: 0 auto 2.75rem;
+  text-align: center;
+}
+
+.omelas-gate__heading {
+  border-bottom: none;
+  margin: 0 0 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--omelas-accent);
+}
+
+.omelas-gate__heading-en {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.24em;
+  color: var(--omelas-fg-light);
+}
+
+.omelas-gate__doors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.omelas-gate__door {
+  display: flex;
+  flex: 1 1 15rem;
+  max-width: 20rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.9rem 1.5rem;
+  border: 1px solid var(--omelas-accent-soft);
+  border-radius: 0.6rem;
+  text-decoration: none;
+  color: var(--omelas-fg);
+  background:
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 45%, 40%, 0.12), transparent 60%),
+    linear-gradient(180deg, hsl(30, 9%, 12%), hsl(30, 10%, 7%));
+  box-shadow: inset 0 1px 0 hsla(41, 60%, 78%, 0.08);
+  transition: border-color 0.18s ease, transform 0.18s ease,
+    box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.omelas-gate__door-lang {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-variant: small-caps;
+  color: var(--omelas-accent);
+}
+
+.omelas-gate__door-note {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: var(--omelas-fg-light);
+}
+
+.omelas-gate__door:hover {
+  border-color: var(--omelas-accent);
+  transform: translateY(-2px);
+  background:
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 48%, 44%, 0.20), transparent 60%),
+    linear-gradient(180deg, hsl(30, 10%, 14%), hsl(30, 10%, 8%));
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.35),
+    inset 0 1px 0 hsla(41, 60%, 78%, 0.12);
+}
+
+.omelas-gate__door:focus-visible {
+  outline: 2px solid var(--omelas-accent);
+  outline-offset: 3px;
+  border-color: var(--omelas-accent);
+}
+
+.omelas-gate__continue {
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  color: var(--omelas-fg-light);
+}
+
+.omelas-gate__continue-link {
+  text-underline-offset: 0.2em;
+}
+
+/* Stack the doors on narrow screens so each stays a large, tappable target. */
+@media (max-width: 34rem) {
+  .omelas-gate__doors {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .omelas-gate__door {
+    max-width: none;
+  }
+}
