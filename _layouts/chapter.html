@@ -3,7 +3,7 @@ layout: default
 ---
 {% comment %}
   Chapter page: prose plus prev/next navigation within the same book and
-  language, plus the language switch to the counterpart chapter.
+  language. The counterpart-language link now lives in the header actions.
 {% endcomment %}
 {% if page.lang == 'ko' %}
   {% assign siblings = site.ko | where: "book", page.book | sort: "chapter" %}
@@ -37,8 +37,6 @@ layout: default
     {% assign next_doc = doc %}
   {% endif %}
 {% endfor %}
-
-{% include language-switch.html %}
 
 <div class="omelas-divider" aria-hidden="true"><span class="omelas-divider__glyph">&#10086;</span></div>
 

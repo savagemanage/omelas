@@ -100,7 +100,8 @@ body {
   text-decoration: none;
 }
 
-.omelas-header__nav a {
+.omelas-header__nav a,
+.omelas-header__nav span {
   color: var(--omelas-fg-light);
   text-decoration: none;
   margin-left: 1rem;
@@ -108,7 +109,8 @@ body {
   letter-spacing: 0.04em;
 }
 
-.omelas-header__nav a[aria-current="page"] {
+.omelas-header__nav a[aria-current="page"],
+.omelas-header__nav span[aria-current] {
   color: var(--omelas-accent);
   font-weight: 600;
 }
