@@ -4,12 +4,22 @@ This document is for the repository owner. It contains recommended GitHub metada
 
 These metadata fields cannot be set from the automation environment used to prepare this repository (the GitHub API returns HTTP 403 for metadata edits here), so the values below are provided as text for you to apply manually in the GitHub UI.
 
-## Recommended "About" description
+> Note: the repository README is now Korean-first (the root `README.md` is the Korean project front page). The recommended "About" description below is therefore given in Korean first, with the English version kept as an optional alternative.
+
+## Recommended "About" description (Korean, recommended)
 
 Paste this into the repository "About" description field (Settings, or the gear icon next to "About" on the repository home page):
 
 ```
-Omelasian Bible: a completed nine-book Korean light novel inspired by Le Guin's The Ones Who Walk Away from Omelas. Read online.
+오멜라스 성서: 르 귄의 "오멜라스를 떠나는 사람들"에서 영감을 받은, 완결된 아홉 권짜리 한국어/영어 이중 언어 성서체 라이트 노벨. 온라인에서 읽기.
+```
+
+### Optional English alternative
+
+If you prefer an English "About" description instead, this is an acceptable alternative:
+
+```
+Omelasian Bible: a completed nine-book bilingual Korean/English scripture-style light novel inspired by Le Guin's The Ones Who Walk Away from Omelas. Read online.
 ```
 
 ## Recommended homepage URL
