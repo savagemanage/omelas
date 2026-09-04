@@ -1,0 +1,17 @@
+{% comment %}
+  Renders a link to the current page's counterpart in the other language.
+  The counterpart URL is built from the target lang and the shared
+  translation_key (e.g. "01-revelation/chapter-01"), matching the collection
+  permalinks /ko/:path/ and /en/:path/.
+{% endcomment %}
+{% if page.lang == 'ko' %}
+  {% assign other_lang = 'en' %}
+  {% assign other_label = 'Read in English' %}
+{% else %}
+  {% assign other_lang = 'ko' %}
+  {% assign other_label = '한국어로 읽기' %}
+{% endif %}
+{% capture counterpart %}/{{ other_lang }}/{{ page.translation_key }}/{% endcapture %}
+<div class="omelas-langswitch">
+  <a class="omelas-langswitch__link" href="{{ counterpart | relative_url }}" hreflang="{{ other_lang }}">{{ other_label }}</a>
+</div>

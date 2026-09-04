@@ -22,27 +22,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          python-version: "3.x"
+          ruby-version: "3.4"
+          bundler-cache: true
 
       - name: Configure Pages
+        id: pages
         uses: actions/configure-pages@v5
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Build docs tree (symlinks)
-        run: python3 scripts/build_docs_tree.py
-
-      - name: Build site
-        run: python3 -m mkdocs build --strict
+      - name: Build site with Jekyll
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll build \
+            --baseurl "${{ steps.pages.outputs.base_path }}"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site
+          path: ./_site
 
   deploy:
     needs: build

@@ -24,6 +24,15 @@ The site is published with GitHub Pages at:
 
 [https://savagemanage.github.io/omelas/](https://savagemanage.github.io/omelas/)
 
+## Bilingual reading structure
+
+Korean is the original, canonical prose, and an English translation is placed alongside it. The site publishes both languages as sibling reading trees:
+
+- Korean canon lives under `/ko`, for example [https://savagemanage.github.io/omelas/ko/01-revelation/00-index/](https://savagemanage.github.io/omelas/ko/01-revelation/00-index/).
+- The English translation lives under `/en`, for example [https://savagemanage.github.io/omelas/en/01-revelation/00-index/](https://savagemanage.github.io/omelas/en/01-revelation/00-index/).
+- Every page carries a language-switch control. Korean and English versions of the same chapter share a `translation_key` (for example `01-revelation/chapter-01`), and the layout uses that key to build the link to the counterpart page, so you can toggle between languages while reading.
+- The translation never alters the Korean canon; it sits next to it.
+
 ## The nine books
 
 Each book has an introduction page and six chapters. The links below point to each book's index page under `books/`.
@@ -40,15 +49,18 @@ Each book has an introduction page and six chapters. The links below point to ea
 
 ## Repository layout
 
-- `books/` - the finished prose. Nine book directories (`NN-<slug>/`), each with a `00-index.md` introduction and `chapter-01.md` through `chapter-06.md` (54 chapters in total).
-- `canon/` - Korean translations and the story bible (`story-bible-ko.md`). This is canon reference material.
-- `mkdocs.yml` - the MkDocs configuration, including the hand-written navigation, theme, and palette.
-- `docs_home.md` - the Korean landing page. The build step symlinks it to `index.md` for the site.
-- `scripts/build_docs_tree.py` - a pre-build step that assembles the `docs/` symlink tree MkDocs expects. It must run before every build.
-- `requirements.txt` - pinned Python dependencies (MkDocs and mkdocs-material).
-- `DEPLOY.md` - full deployment notes (Korean) covering GitHub Pages and GitHub Actions.
+- `books/` - the finished Korean prose. Nine book directories (`NN-<slug>/`), each with a `00-index.md` introduction and `chapter-01.md` through `chapter-06.md` (54 chapters in total). This is the canonical source and is never mutated in place.
+- `canon/` - Korean translations of the frozen root files, the story bible (`story-bible-ko.md`), and the translation glossary (`translation-glossary.md`) that keeps canon terminology and name romanization consistent across the English translation. This is canon reference material.
+- `Gemfile` and `Gemfile.lock` - the pinned Ruby dependencies (Jekyll and the plugins the site uses).
+- `_config.yml` - the Jekyll configuration: site title, `url` and `baseurl` (`/omelas`), the dark default, and the two bilingual collections.
+- `_ko/` and `_en/` - the generated Jekyll collections for the Korean canon (`/ko`) and the English translation (`/en`). Each document carries front-matter linking it to its counterpart. These trees are committed so the Pages build needs no pre-step.
+- `_layouts/` and `_includes/` - the Jekyll templates. `_layouts/` holds `default.html`, `book.html`, and `chapter.html`; `_includes/` holds the header/nav and the language-switch control.
+- `assets/css/omelas.css` - the dark, book-matched theme (slate background, muted indigo accent, Hangul-friendly Noto Serif KR serif, comfortable long-form measure).
+- `index.html` - the bilingual landing page (the Omelas cover plus entry points into the Korean and English reading trees).
+- `scripts/build_bilingual.rb` - the generation script that reads `books/` and writes the `_ko` and `_en` collection trees without editing the sources. See `scripts/README.md`. Re-run it when the Korean source prose changes.
+- `DEPLOY.md` - full deployment notes (Korean) covering the Jekyll build and GitHub Actions deploy.
 - `README.md`, `ideation.md`, `page-1.md` - frozen English originals at the repository root (canon).
-- `docs/` and `site/` - generated build artifacts. Both are gitignored and must not be committed.
+- `_site/` - the generated build artifact. It is gitignored and must not be committed.
 
 ## Canon and no-edit policy
 
@@ -56,40 +68,38 @@ The prose is complete. The following are canon and must not be altered:
 
 - The English root files `README.md`, `ideation.md`, and `page-1.md`.
 - All prose under `books/`.
-- Everything under `canon/` (Korean translations and the story bible).
+- Everything under `canon/` (Korean translations, the story bible, and the glossary).
 
 Per the story bible, no file in this repository should contain the long em dash character; use regular hyphens or rephrase instead.
 
 ## Build and preview locally
 
-You need Python 3 with the pinned dependencies. The steps below mirror `DEPLOY.md`; see that file for full deployment details.
+You need Ruby 3.4 with Bundler. The steps below mirror `DEPLOY.md`; see that file for full deployment details.
 
 1. Install dependencies:
 
    ```bash
-   python3 -m pip install -r requirements.txt
+   bundle install
    ```
 
-2. Build the docs symlink tree (required before every build or serve):
+2. Preview with a local server (opens at http://127.0.0.1:4000/omelas/):
 
    ```bash
-   python3 scripts/build_docs_tree.py
+   bundle exec jekyll serve
    ```
 
-3. Preview with a local server (opens at http://127.0.0.1:8000):
+3. Build the static site into `./_site`:
 
    ```bash
-   python3 -m mkdocs serve
+   bundle exec jekyll build
    ```
 
-4. Build the static site into `./site`:
+If you change the Korean source prose under `books/`, regenerate the reading trees and commit them:
 
-   ```bash
-   python3 -m mkdocs build
-   ```
-
-For a stricter build that fails on warnings, use `python3 -m mkdocs build --strict`.
+```bash
+ruby scripts/build_bilingual.rb
+```
 
 ## Deployment
 
-Pushes to the `main` branch trigger the `.github/workflows/pages.yml` GitHub Actions workflow, which installs dependencies, builds the docs tree, runs `mkdocs build --strict`, and deploys to GitHub Pages. See `DEPLOY.md` for the complete procedure and the one-time GitHub Pages source setup.
+Pushes to the `main` branch trigger the `.github/workflows/pages.yml` GitHub Actions workflow, which sets up Ruby, installs dependencies with Bundler, runs `bundle exec jekyll build` with `JEKYLL_ENV=production`, and deploys the resulting `_site/` to GitHub Pages. See `DEPLOY.md` for the complete procedure and the one-time GitHub Pages source setup.

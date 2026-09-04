@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% comment %}
+  Chapter page: prose plus prev/next navigation within the same book and
+  language, plus the language switch to the counterpart chapter.
+{% endcomment %}
+{% if page.lang == 'ko' %}
+  {% assign siblings = site.ko | where: "book", page.book | sort: "chapter" %}
+  {% assign index_label = '책 소개' %}
+  {% assign prev_label = '이전 장' %}
+  {% assign next_label = '다음 장' %}
+{% else %}
+  {% assign siblings = site.en | where: "book", page.book | sort: "chapter" %}
+  {% assign index_label = 'Book index' %}
+  {% assign prev_label = 'Previous' %}
+  {% assign next_label = 'Next' %}
+{% endif %}
+
+{% assign book_index = null %}
+{% assign prev_doc = null %}
+{% assign next_doc = null %}
+{% for doc in siblings %}
+  {% if doc.chapter == 0 %}
+    {% assign book_index = doc %}
+  {% elsif doc.chapter == page.chapter %}
+    {% assign this_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% assign only_chapters = siblings | where_exp: "d", "d.chapter > 0" | sort: "chapter" %}
+{% for doc in only_chapters %}
+  {% if doc.chapter < page.chapter %}
+    {% assign prev_doc = doc %}
+  {% endif %}
+  {% if doc.chapter > page.chapter and next_doc == null %}
+    {% assign next_doc = doc %}
+  {% endif %}
+{% endfor %}
+
+{% include language-switch.html %}
+
+<div class="omelas-prose">
+  {{ content }}
+</div>
+
+<nav class="omelas-chapternav" aria-label="chapter navigation">
+  <span class="omelas-chapternav__prev">
+    {% if prev_doc %}<a rel="prev" href="{{ prev_doc.url | relative_url }}">&#8592; {{ prev_label }}</a>{% endif %}
+  </span>
+  <span class="omelas-chapternav__index">
+    {% if book_index %}<a href="{{ book_index.url | relative_url }}">{{ index_label }}</a>{% endif %}
+  </span>
+  <span class="omelas-chapternav__next">
+    {% if next_doc %}<a rel="next" href="{{ next_doc.url | relative_url }}">{{ next_label }} &#8594;</a>{% endif %}
+  </span>
+</nav>

@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% comment %}
+  Book index. Renders the book's own prose (title + synopsis) from content,
+  then a generated, correct chapter list so navigation resolves under baseurl.
+{% endcomment %}
+{% if page.lang == 'ko' %}
+  {% assign chapters = site.ko | where: "book", page.book | where_exp: "d", "d.chapter > 0" | sort: "chapter" %}
+  {% assign chapter_heading = '장 목록' %}
+  {% assign home_label = '표지로 돌아가기' %}
+{% else %}
+  {% assign chapters = site.en | where: "book", page.book | where_exp: "d", "d.chapter > 0" | sort: "chapter" %}
+  {% assign chapter_heading = 'Chapters' %}
+  {% assign home_label = 'Back to the cover' %}
+{% endif %}
+
+{% include language-switch.html %}
+
+{% comment %}
+  Render only the prose (title + synopsis) from the source body. The source's
+  in-body chapter list (KO "장 목록", EN "Chapters") is dropped here so we do not
+  emit the source's relative ".md" links, which 404 under the collection
+  permalink. The correct, baseurl-resolved chapter list is rendered below from
+  the collection. `content` is the rendered HTML at layout time, so we split on
+  the chapter-list <h2> heading and keep everything before it. This never
+  mutates the source files on disk.
+{% endcomment %}
+{% assign list_marker = '<h2 id="' %}
+{% assign prose_html = content | split: list_marker %}
+{% assign prose_before = '' %}
+{% for part in prose_html %}
+  {% if forloop.first %}
+    {% assign prose_before = part %}
+  {% else %}
+    {% assign head_text = part | split: '</h2>' | first | split: '>' | last %}
+    {% if head_text == chapter_heading %}
+      {% break %}
+    {% else %}
+      {% assign prose_before = prose_before | append: list_marker | append: part %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+<div class="omelas-prose">
+  {{ prose_before }}
+</div>
+
+<nav class="omelas-chapters" aria-label="{{ chapter_heading }}">
+  <h2 class="omelas-chapters__heading">{{ chapter_heading }}</h2>
+  <ol class="omelas-chapters__list">
+    {% for ch in chapters %}
+    <li><a href="{{ ch.url | relative_url }}">{{ ch.title }}</a></li>
+    {% endfor %}
+  </ol>
+</nav>
+
+<p class="omelas-backhome"><a href="{{ '/' | relative_url }}">{{ home_label }}</a></p>

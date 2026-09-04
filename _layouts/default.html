@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'ko' }}" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/omelas.css' | relative_url }}">
+</head>
+<body>
+  {% include header.html %}
+  <main class="omelas-main">
+    <article class="omelas-article">
+      {{ content }}
+    </article>
+  </main>
+  <footer class="omelas-footer">
+    <p>오멜라스 성서 · Omelasian Bible</p>
+  </footer>
+</body>
+</html>

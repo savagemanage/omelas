@@ -1,4 +1,11 @@
-# Generated build artifacts
+# Jekyll build output and local tooling
+_site/
+.jekyll-cache/
+.jekyll-metadata
+vendor/bundle/
+.bundle/
+
+# Legacy MkDocs build artifacts (system being retired)
 /site
 /docs
 
