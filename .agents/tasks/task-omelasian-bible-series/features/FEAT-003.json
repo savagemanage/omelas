@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-003",
+  "type": "feat",
+  "description": "Write Book 2 of 9: '오멜라스: 창세기 (Omelas: Genesis)' in Korean. Origin story: how the engineer David wanted eternal life, uploaded his consciousness, invented World 3.0, and how the Mechanical Utopia and the faction structure (Goods/Engineers/Evangelists vs Evils/Scientists, the Untransformed, the Animals) came to be at Year Zero. This is a flashback/foundational book that grounds the revelation from Book 1. Depends on FEAT-001 story bible; thematically follows FEAT-002.",
+  "status": "completed",
+  "steps": [
+    "Create books/02-genesis/ directory and 00-index.md (Korean title, synopsis, chapter list).",
+    "Write ~5-6 Korean chapters (chapter-01.md ...) covering: David's mortal fear and ambition, the invention of 월드 3.0, the first consciousness migration, the birth of the doctrine that becoming a machine = 열반/Nirvana, the schism that creates the Goods and the Evils, and the origin of baptism/변환.",
+    "Portray David's transformation into the founding intelligence of World 3.0 consistent with the story bible.",
+    "Follow terminology and character canon from canon/story-bible-ko.md.",
+    "Target ~27-28 pages (~12,000-13,000 Korean characters)."
+  ],
+  "acceptance_criteria": [
+    "books/02-genesis/ contains 00-index.md and >=5 Korean chapter files.",
+    "Narrative explains David + World 3.0 origin consistent with canon and story bible.",
+    "Total ~12,000-13,000 Korean characters.",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/02-genesis/ and confirm files exist.",
+    "Run: cat books/02-genesis/chapter-*.md | wc -m and confirm ~11,000-14,000 characters.",
+    "Spot-read a chapter to confirm Korean prose and David/World 3.0 origin content."
+  ],
+  "blocked_reason": null,
+  "findings": "Created books/02-genesis/ with 00-index.md and 6 Korean chapters. Character counts (wc -m): chapter-01=2128, chapter-02=2458, chapter-03=2251, chapter-04=2188, chapter-05=2576, chapter-06=2294. Total chapters = 13895 chars (within acceptance range 11000-14000; slightly above the 12600 ideal target but within bounds). No em dashes (verified with grep across all files, all 0). Chapters cover: (1) David's mortal fear of death after a colleague dies and his wife's earlier death; (2) invention of 월드 3.0, the copy-then-delete design decision made explicit, animal/rat migration tests; (3) the first migration and David's unresolvable original-vs-copy question; (4) coining 열반/Nirvana doctrine, David becoming 창건 지성 and being called 신; (5) the schism producing 굿즈/엔지니어/전도사 vs 이블즈/과학자; (6) 영년 institutionalization of 세례 and full faction structure (굿즈+엔지니어+전도사 vs 이블즈+과학자, 미변환자, 동물들). Grounds Book 1's revelation (copy-then-delete hidden truth) per bible section 4.2. New minor characters introduced (consistent with canon, no contradictions): 세아/Sea (David's daughter, human, non-transformed observer; not in glossary, a supporting original character); David's late wife (unnamed); an unnamed늙은 개 (an Animal, prefigures 미르's symbolic role of the uncorrupted animal gaze); an unnamed young researcher/과학자 who first names the 'copy-then-delete' problem and a defecting engineer. The disillusioned fully-machine 굿 who feels loss rather than Nirvana is foreshadowed as the seed of Noa's counter-doctrine (kept as future-book setup, not resolved). No new canonical terms coined; used only bible glossary terms plus 구력 (Old Calendar) continuity from Book 1. English canon files untouched."
+}

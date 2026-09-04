@@ -1,0 +1,22 @@
+{
+  "project_type": "Creative writing project: a Korean-language light novel series ('Omelasian Bible' / 오멜라스 성서) written as markdown files in a git repo",
+  "language": "Korean (한국어) for all novel prose and canon translations. Existing canon files are in English and must be preserved; Korean translations added alongside.",
+  "build_system": "None (markdown prose repo). No compiler/package manager. Verification is content-based: file existence, structure, language, and word/character-count budget.",
+  "test_framework": "None. 'Verification' = word/character count checks via shell (wc -m) and manual consistency review against canon.",
+  "build_command": "N/A (no build). Structural check: ls -R and per-book character counts.",
+  "test_command": "N/A. Use: find . -name '*.md' -path '*/books/*' | xargs wc -m  to measure Korean character totals against the ~250-page (~110,000-125,000 char) budget.",
+  "verification_instructions": "1) Confirm all 9 book directories exist with their chapter files. 2) Confirm each chapter file is written in Korean. 3) Sum character counts across all book chapter files and confirm total approximates 250 pages (target ~110,000-125,000 Korean characters using ~450 chars/page). 4) Confirm Korean translations of README.md, ideation.md, page-1.md exist alongside English originals. 5) Spot-check narrative consistency against the canon bible (canon/story-bible-ko.md).",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "No environment setup needed. Repo is at /projects/sandbox/omelas on branch main. Just create markdown files.",
+  "environment_constraints": "Standard sandbox. No external network content needed - this is original creative writing derived from in-repo canon. Do NOT push or create PRs (orchestrator handles publishing).",
+  "contribution_requirements": "Stay strictly consistent with canon in README.md and ideation.md. Preserve English originals. Never use em dashes. Korean-only prose in chapters.",
+  "key_patterns": "Biblical book naming (Revelation/Genesis/Exodus/Judges/Psalms/Proverbs/New Testament + extensions Acrophyia, Infancy Gospel). Le Guin 'Omelas' thematic core: a utopia built on hidden sacrifice. World 3.0 = consciousness-upload network invented by engineer David. Factions: The Goods(Gods)+Engineers+Evangelists (pro-baptism/transformation into machines=Nirvana), The Evils+Scientists (anti-baptism, know it destroys people), The Untransformed, The Animals. Opening scene is on Gangnam Street (Korean setting).",
+  "relevant_files": [
+    "README.md (canon: premise + roadmap, English)",
+    "ideation.md (canon: factions + world, English)",
+    "page-1.md (canon: opening line on Gangnam Street, English)",
+    "canon/story-bible-ko.md (to be created: authoritative Korean narrative bible all books must follow)",
+    "books/<book>/ (per-book chapter directories)"
+  ],
+  "directory_structure": "Root has English canon (README.md, ideation.md, page-1.md). New: canon/ holds Korean translations + the Korean story bible. books/ holds one directory per book, each containing 00-index.md plus chapter-NN.md files in Korean."
+}

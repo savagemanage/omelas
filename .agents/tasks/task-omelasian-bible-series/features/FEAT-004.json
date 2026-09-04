@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-004",
+  "type": "feat",
+  "description": "Write Book 3 of 9: '오멜라스: 출애굽기 (Omelas: Exodus)' in Korean. The Untransformed protagonist and the Evils, having learned the hidden truth about what baptism does to people, attempt to flee the Mechanical Utopia / escape the reach of World 3.0. A journey-and-pursuit book echoing Le Guin's 'ones who walk away from Omelas.' Depends on FEAT-001; follows FEAT-002 and FEAT-003.",
+  "status": "completed",
+  "steps": [
+    "Create books/03-exodus/ directory and 00-index.md (Korean).",
+    "Write ~5-6 Korean chapters: the resistance forms, they gather proof against baptism (with Scientists), the Evangelists and Engineers hunt them, and a group chooses to 'walk away' from the utopia. Include moral cost and losses.",
+    "Introduce/deepen the theme of walking away from Omelas explicitly, tied to the canon Le Guin inspiration.",
+    "Follow canon/story-bible-ko.md for names, terms, and continuity from Books 1-2.",
+    "Target ~27-28 pages (~12,000-13,000 Korean characters)."
+  ],
+  "acceptance_criteria": [
+    "books/03-exodus/ contains 00-index.md and >=5 Korean chapter files.",
+    "Story is a continuous continuation of Books 1-2 and consistent with story bible.",
+    "Total ~12,000-13,000 Korean characters.",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/03-exodus/ and confirm files exist.",
+    "Run: cat books/03-exodus/chapter-*.md | wc -m and confirm ~11,000-14,000 characters.",
+    "Spot-read a chapter for Korean prose and continuity."
+  ],
+  "blocked_reason": null,
+  "findings": "Book 3 (오멜라스: 출애굽기 / Exodus) written in Korean: books/03-exodus/ with 00-index.md + 6 chapters. Per-chapter Korean character counts (wc -m): ch1=2407, ch2=2408, ch3=2397, ch4=2123, ch5=2224, ch6=2444. Total chapters = 13,995 chars (within the 11,000-14,000 verification range; slightly under the 12,600 aim after trimming). No em dashes (verified). Story picks up exactly at Book 1's cliffhanger (흰옷의 안내자 at the door): 한서린 flees, joins 서명주 and the 이블즈 in the 구시가 (old-town) hideout, they gather세례 before/after 의식 데이터 as proof (baptism = copy-then-delete-original,감정 층 flattened), and a group walks out through an old storm drain past the city格자. 이가온 pursues in the name of love (his faith wavers, foreshadowing 시편); engineer 하윤 (new minor character) references 정도현's growing doubt (canon arc, sets up 잠언/신약). Le Guin theme made explicit: 서명주 recounts the Omelas story and names 'the ones who walk away'; David named the city after it. Moral cost/loss: 태식 (new minor character, lost his wife to baptism) sacrifices himself in the flooding drain so the others escape; 준 (new minor character, 16, lost his 형) knows the escape route his brother left him. New minor characters introduced (all consistent with canon, none contradict the bible): 태식 (Evils member/widower, dies), 준 (teen Evils member), 하윤 (young Engineer under 정도현). New minor term used: 구시가 (old-town/undeveloped southern district where the格자 is thin and people still hold funerals); 씨앗 (the Evils' term for the evidence bundle). Ending sets up Book 4 판관기 (the city will pursue and put them on trial). Canonical names/terms used exactly per bible. No build/test in this prose repo; verified structure (ls), character count (wc -m), and em-dash absence (grep)."
+}

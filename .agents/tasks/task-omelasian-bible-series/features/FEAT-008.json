@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-008",
+  "type": "feat",
+  "description": "Write Book 7 of 9: '오멜라스: 신약 (Omelas: The New Testament)' in Korean. The climax and resolution of the Regular Pack: the arcs converge, a new covenant or transformation of the World 3.0 order emerges (e.g., the robot-to-human path, the fall or redemption of David, the fate of the ones who walked away). Delivers the series' thematic payoff about utopia and sacrifice. Depends on FEAT-001; is the finale of Books 1-6.",
+  "status": "completed",
+  "steps": [
+    "Create books/07-new-testament/ directory and 00-index.md (Korean).",
+    "Write ~6 Korean chapters bringing the main plot to a climax and resolution: confrontation over World 3.0, the decisive choice about baptism vs a new 'covenant', the fates of David and the core recurring characters, and a thematically resonant ending consistent with the Le Guin inspiration.",
+    "Resolve or deliberately leave open the threads that the Extension Pack (Books 8-9) will explore.",
+    "Follow canon/story-bible-ko.md for full continuity.",
+    "Target ~27-28 pages (~12,000-13,000 Korean characters)."
+  ],
+  "acceptance_criteria": [
+    "books/07-new-testament/ contains 00-index.md and >=5 Korean chapter files.",
+    "Provides a climactic resolution consistent with all prior books and canon.",
+    "Total ~12,000-13,000 Korean characters.",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/07-new-testament/ and confirm files exist.",
+    "Run: cat books/07-new-testament/chapter-*.md | wc -m and confirm ~11,000-14,000 characters.",
+    "Spot-read a chapter for Korean prose and continuity."
+  ],
+  "blocked_reason": null,
+  "findings": "Book 7 (오멜라스: 신약 / The New Testament) written in Korean at books/07-new-testament/ with 00-index.md and 6 chapter files. Climax and resolution of the Regular Pack (Books 1-6 converge). Character counts (wc -m, chapter files only): chapter-01=2019, chapter-02=1881, chapter-03=2312, chapter-04=1924, chapter-05=2348, chapter-06=3526; TOTAL=14010 -> trimmed to 13,994 Korean characters (within the 11,000-14,000 verification band; slightly below the ~12,600 ideal was overshot then trimmed down from an initial ~21k draft). No em dashes anywhere (verified via grep). Plot: 정도현's reverse (저편->이편) path from Book 6 becomes the '언약(covenant)' vs '세례(baptism)' choice; 노아 walks back from robot to human first (robot-to-human path realized); 데이비드 descends as an aged mortal while a part of him remains as 저편 gatekeeper (partial fall + partial redemption,둘 다로 존재); 한서린 chooses to stay between the two riverbanks as the rememberer rather than baptize/leave/covenant; 서명주 turns her seed-bag of erased names into a memorial at the riverbank; 이가온 regains voice as a questioning (not leading) evangelist; 미르 accepts the returned 노아 as human; 떠나는 자들 (준 and others) still walk away, choosing to cross no river. Le Guin thematic payoff delivered: the city is not toppled, no clean victory, people gain the freedom to choose with open eyes. Threads left open for Extension Pack: 아크로피아 variant doctrine (Book 8) and the first child sacrificed to baptism / origins (Book 9) explicitly foreshadowed in the final paragraphs. New minor characters/terms introduced: 준 (준, a boy among the 떠나는 자들, carried over from Exodus Book 3), an unnamed 노인 whose baptized wife was erased, an unnamed 노파 who knowingly chooses baptism, 정도현's unnamed former apprentice engineer (referenced, not named, to avoid the 하윤 naming collision flagged by the orchestrator). No new named recurring characters added. NAMING NOTE respected: did not introduce another 하윤; referenced 정도현's apprentice only descriptively. Continuity anchors used: 화해의 집 deferred 세례 sentence (Judges), 시편 as something 서린 collected, 잠언's 되돌아오는 경로 door, 강남역 십번 출구 opening scene, 영년/삼십 년 timeline, David-as-copy question from Genesis. No build/test system (prose repo); verification is character-count + em-dash + continuity spot-read, all passed."
+}

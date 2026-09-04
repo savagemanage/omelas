@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-009",
+  "type": "feat",
+  "description": "Write Book 8 of 9 (Extension Pack): '오멜라스: 아크로피아 (Omelas: Acrophyia)' in Korean. A side/extension story that expands the world beyond the main arc - e.g., a distant region, sect, or layer of World 3.0 called Acrophyia, exploring a variant of the transformation doctrine and characters adjacent to the main cast. Stands mostly on its own but is consistent with the established canon and events of Books 1-7. Depends on FEAT-001; set after or alongside Book 7.",
+  "status": "completed",
+  "steps": [
+    "Create books/08-acrophyia/ directory and 00-index.md (Korean).",
+    "Write ~5-6 Korean chapters introducing Acrophyia as a place/faction/layer within Omelas and telling a self-contained extension story that enriches the mythology (define what Acrophyia is in the story bible if not already fixed, then keep it consistent).",
+    "Reference established canon (World 3.0, baptism, factions) without contradicting Books 1-7.",
+    "Follow canon/story-bible-ko.md.",
+    "Target ~27-28 pages (~12,000-13,000 Korean characters)."
+  ],
+  "acceptance_criteria": [
+    "books/08-acrophyia/ contains 00-index.md and >=5 Korean chapter files.",
+    "Introduces Acrophyia coherently and stays consistent with the main-series canon.",
+    "Total ~12,000-13,000 Korean characters.",
+    "No em dashes."
+  ],
+  "verification": [
+    "Run: ls books/08-acrophyia/ and confirm files exist.",
+    "Run: cat books/08-acrophyia/chapter-*.md | wc -m and confirm ~11,000-14,000 characters.",
+    "Spot-read a chapter for Korean prose and consistency."
+  ],
+  "blocked_reason": null,
+  "findings": "Book 8 (오멜라스: 아크로피아) written in Korean: 00-index.md + 6 chapter files. Chapter char counts (wc -m): ch01=2245, ch02=2161, ch03=2201, ch04=2269, ch05=2288, ch06=2833. Chapters total = 13,997 chars (within 11,000-14,000 budget; target ~12,600). Zero em dashes across all files. Self-contained extension consistent with Books 1-7 canon and glossary. Acrophyia defined per glossary as World 3.0's highest layer and a frontier sect-zone experimenting with a VARIANT transformation doctrine: the '상승(ascension)' doctrine of '벗는 자들(the ones who shed)' who, after baptism, shed memory/self one layer at a time toward an empty summit ('참된 열반/true nirvana'). Where 세례 erases the original and 노아's 되돌아오는 강 lets copies descend to humanity, 상승 erases even the copy, voluntarily. Story hooks off Book 7's final line foreshadowing Acrophyia and off the 되돌아오는 강 (reverse path) and 두 개의 강가 (two riverbanks) canon; establishes a third path: descending/re-taking one's shed layers. New minor characters: 하도경/Ha Dogyeong (young 과학자 who maintains 서명주's memorial of the erased, travels up to Acrophyia); 아이린/Irene (an ascendant who has shed six layers, formerly mother of a baptized-away sick child). New terms introduced (all subordinate to canon, non-contradicting): 상승(ascension), 벗는 자들(the ones who shed), 겹(layer, the shed units: 소유/미래/관계/후회/기쁨/슬픔/이름), 봉우리(the summit), 골짜기(the valley where shed layers pool). New minor named erased character: 하나/Hana (Irene's daughter). Reused canon exactly: 오멜라스, 월드 3.0, 세례/변환, 미변환자, 굿즈/신들, 엔지니어, 이블즈, 과학자, 아크로피아, 니르바나/열반, 떠나는 자들, 서명주, 노아 (되돌아오는 강 / 저편→이편), 미르 referenced implicitly via bible; post-Book-7 world state (two riverbanks, memorial of the erased, reverse path) honored. No build/test (prose repo); verified via wc -m and grep for em dashes. Did NOT touch Book 9 or English canon files."
+}
