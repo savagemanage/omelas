@@ -4,10 +4,10 @@ layout: "book"
 book: "04-judges"
 book_num: 4
 chapter: 0
-title: "오멜라스: 판관기 (Omelas: Judges)"
+title: "오멜라스: 판관기"
 translation_key: "04-judges/00-index"
 ---
-# 오멜라스: 판관기 (Omelas: Judges)
+# 오멜라스: 판관기
 
 ## 시놉시스
 

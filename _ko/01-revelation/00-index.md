@@ -4,10 +4,10 @@ layout: "book"
 book: "01-revelation"
 book_num: 1
 chapter: 0
-title: "오멜라스: 요한계시록 (Omelas: Revelation)"
+title: "오멜라스: 요한계시록"
 translation_key: "01-revelation/00-index"
 ---
-# 오멜라스: 요한계시록 (Omelas: Revelation)
+# 오멜라스: 요한계시록
 
 ## 시놉시스
 

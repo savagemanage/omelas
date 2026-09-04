@@ -4,10 +4,10 @@ layout: "book"
 book: "02-genesis"
 book_num: 2
 chapter: 0
-title: "오멜라스: 창세기 (Omelas: Genesis)"
+title: "오멜라스: 창세기"
 translation_key: "02-genesis/00-index"
 ---
-# 오멜라스: 창세기 (Omelas: Genesis)
+# 오멜라스: 창세기
 
 ## 시놉시스
 

@@ -4,10 +4,10 @@ layout: "book"
 book: "03-exodus"
 book_num: 3
 chapter: 0
-title: "오멜라스: 출애굽기 (Omelas: Exodus)"
+title: "오멜라스: 출애굽기"
 translation_key: "03-exodus/00-index"
 ---
-# 오멜라스: 출애굽기 (Omelas: Exodus)
+# 오멜라스: 출애굽기
 
 ## 시놉시스
 

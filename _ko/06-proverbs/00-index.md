@@ -4,10 +4,10 @@ layout: "book"
 book: "06-proverbs"
 book_num: 6
 chapter: 0
-title: "오멜라스: 잠언 (Omelas: Proverbs)"
+title: "오멜라스: 잠언"
 translation_key: "06-proverbs/00-index"
 ---
-# 오멜라스: 잠언 (Omelas: Proverbs)
+# 오멜라스: 잠언
 
 ## 시놉시스
 
