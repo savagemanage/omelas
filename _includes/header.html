@@ -1,16 +1,37 @@
 <header class="omelas-header">
   <a class="omelas-header__brand" href="{{ '/' | relative_url }}">오멜라스 성서</a>
   <div class="omelas-header__actions">
-    {% if page.book %}
-    <nav class="omelas-header__nav">
-      <a href="{{ '/ko/' | append: page.book | append: '/00-index/' | relative_url }}"
-         {% if page.lang == 'ko' %}aria-current="page"{% endif %}>한국어</a>
-      <a href="{{ '/en/' | append: page.book | append: '/00-index/' | relative_url }}"
-         {% if page.lang == 'en' %}aria-current="page"{% endif %}>English</a>
+    {% if page.translation_key %}
+    {% comment %}
+      Book indexes and chapters carry a translation_key, so we render a single
+      link to this page's counterpart in the other language, built from the
+      shared translation_key and the collection permalinks (/ko/:path/ and
+      /en/:path/). This keeps a chapter reader on the counterpart chapter.
+    {% endcomment %}
+    {% if page.lang == 'ko' %}
+      {% assign other_lang = 'en' %}
+      {% assign other_label = 'English' %}
+    {% else %}
+      {% assign other_lang = 'ko' %}
+      {% assign other_label = '한국어' %}
+    {% endif %}
+    {% capture counterpart %}/{{ other_lang }}/{{ page.translation_key }}/{% endcapture %}
+    <nav class="omelas-header__nav" aria-label="언어 (Language)">
+      <span aria-current="true">{% if page.lang == 'ko' %}한국어{% else %}English{% endif %}</span>
+      <a href="{{ counterpart | relative_url }}" hreflang="{{ other_lang }}">{{ other_label }}</a>
+    </nav>
+    {% else %}
+    {% comment %}
+      Home gate has no single counterpart, so we offer both entry links to the
+      first book index in each language, matching the gate doors.
+    {% endcomment %}
+    <nav class="omelas-header__nav" aria-label="언어 (Language)">
+      <a href="{{ '/ko/01-revelation/00-index/' | relative_url }}" hreflang="ko">한국어</a>
+      <a href="{{ '/en/01-revelation/00-index/' | relative_url }}" hreflang="en">English</a>
     </nav>
     {% endif %}
     <button type="button" id="omelas-theme-toggle" class="omelas-theme-toggle"
-            aria-label="라이트 모드로 전환 (Switch to light theme)" aria-pressed="false">
+            aria-label="다크 모드로 전환 (Switch to dark theme)" aria-pressed="false">
       <span class="omelas-theme-toggle__glyph" aria-hidden="true"></span>
     </button>
   </div>
