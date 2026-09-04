@@ -7,14 +7,18 @@ layout: default
 {% endcomment %}
 {% if page.lang == 'ko' %}
   {% assign siblings = site.ko | where: "book", page.book | sort: "chapter" %}
+  {% assign lang_docs = site.ko %}
   {% assign index_label = '책 소개' %}
   {% assign prev_label = '이전 장' %}
   {% assign next_label = '다음 장' %}
+  {% assign next_book_label = '다음 책' %}
 {% else %}
   {% assign siblings = site.en | where: "book", page.book | sort: "chapter" %}
+  {% assign lang_docs = site.en %}
   {% assign index_label = 'Book index' %}
   {% assign prev_label = 'Previous' %}
   {% assign next_label = 'Next' %}
+  {% assign next_book_label = 'Next book' %}
 {% endif %}
 
 {% assign book_index = null %}
@@ -38,6 +42,18 @@ layout: default
   {% endif %}
 {% endfor %}
 
+{% comment %}
+  When this is the last chapter of the book (no next_doc), offer a link onward
+  to the next book's index in the same language, so a reader can keep going
+  through the nine books without returning to the home page.
+{% endcomment %}
+{% assign next_book_index = null %}
+{% if next_doc == null %}
+  {% assign next_book_num = page.book_num | plus: 1 %}
+  {% assign next_book_indexes = lang_docs | where: "chapter", 0 | where: "book_num", next_book_num %}
+  {% assign next_book_index = next_book_indexes | first %}
+{% endif %}
+
 <div class="omelas-divider" aria-hidden="true"><span class="omelas-divider__glyph">&#10086;</span></div>
 
 <div class="omelas-prose omelas-prose--chapter">
@@ -52,6 +68,6 @@ layout: default
     {% if book_index %}<a href="{{ book_index.url | relative_url }}">{{ index_label }}</a>{% endif %}
   </span>
   <span class="omelas-chapternav__next">
-    {% if next_doc %}<a rel="next" href="{{ next_doc.url | relative_url }}">{{ next_label }} &#8594;</a>{% endif %}
+    {% if next_doc %}<a rel="next" href="{{ next_doc.url | relative_url }}">{{ next_label }} &#8594;</a>{% elsif next_book_index %}<a rel="next" href="{{ next_book_index.url | relative_url }}">{{ next_book_label }} &#8594;</a>{% endif %}
   </span>
 </nav>
