@@ -9,8 +9,6 @@ translation_key: "06-proverbs/00-index"
 ---
 # Omelas: Proverbs
 
-> Book Six of the Omelasian Bible. It follows the terms, characters, chronology, and synopsis 4.6 of the canonical story bible (canon/story-bible-ko.md).
-
 ## Synopsis
 
 The song has stopped. The questions the Psalms only endured and did not answer now cross over to the place of debate. The verdict deferred baptism to someday, and Noa promised, together with Jung Dohyun, to open the road by which a robot returns to being human. To keep that promise, one must first answer the question. Is becoming a machine truly Nirvana, or is it annihilation dressed in the clothes of salvation. Is turning a robot back into a human a greater good, or one more arrogance.

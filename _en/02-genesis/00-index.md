@@ -9,8 +9,6 @@ translation_key: "02-genesis/00-index"
 ---
 # Omelas: Genesis
 
-> Book Two of the Omelasian Bible. It follows the terms, characters, chronology, and synopsis 4.2 of the canonical story bible (canon/story-bible-ko.md).
-
 ## Synopsis
 
 Time turns back to before Year Zero, to a certain winter of the Old Calendar. The Engineer David was a human seized by the fear of death. Unable to bear his aging body and the self that would extinguish in the end, he resolves to migrate his consciousness into the cloud and build a world that does not die. That is World 3.0. On the night the first migration of consciousness takes place, David can no longer tell whether he is still the original David, or a copy that remained after the original was erased. This question was the seed of the secret that would be buried at the heart of every baptism to come.

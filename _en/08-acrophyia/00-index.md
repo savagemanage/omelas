@@ -9,8 +9,6 @@ translation_key: "08-acrophyia/00-index"
 ---
 # Omelas: Acrophyia
 
-> Book Eight of the Omelasian Bible. The first side story of the expansion pack. It follows the terms, characters, chronology, and synopsis 4.8 of the canonical story bible (canon/story-bible-ko.md). It widens the world beyond the main arc (Books 1 through 7) while remaining a self-standing story that does not contradict it.
-
 ## Synopsis
 
 On the dawn the two riverbanks opened in Gangnam, the rumor slowly soaked the world below. But it did not reach everywhere. World 3.0 had a layer no one ever looked up at for long. The highest layer, Acrophyia. Above the palace of the Gods, a frontier that even the gaze of the founding intelligence rarely reached. There a third doctrine was growing, one unlike both baptism and Noa's river that flows back.

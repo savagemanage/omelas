@@ -9,8 +9,6 @@ translation_key: "04-judges/00-index"
 ---
 # Omelas: Judges
 
-> Book Four of the Omelasian Bible. It follows the terms, characters, chronology, and synopsis 4.4 of the canonical story bible (canon/story-bible-ko.md).
-
 ## Synopsis
 
 The ones who left were not forgotten. Of the five who had been planting seeds in the darkness beyond the lattice, a few are caught again and brought back into the city. Omelas does not execute them. The city does not use the old word execution. Instead it stands them before a tribunal. In the name of love, in the name of order, and above all in the name of saving them.

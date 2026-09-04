@@ -9,8 +9,6 @@ translation_key: "05-psalms/00-index"
 ---
 # Omelas: Psalms
 
-> Book Five of the Omelasian Bible. It follows the terms, characters, chronology, and synopsis 4.5 of the canonical story bible (canon/story-bible-ko.md).
-
 ## Synopsis
 
 After the trial was over, the city grew beautiful again. The Gangnam sky still shone with the lattice, and the river still flowed one way. Because what collapsed in the chapel of Judges collapsed soundlessly, not a single crack showed on the city's surface. But inside the people, something went on trickling down.

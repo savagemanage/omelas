@@ -1,0 +1,31 @@
+---
+layout: default
+lang: en
+title: "Omelas: Omelasian Bible"
+permalink: /en/
+is_home: true
+home_counterpart: /
+---
+<div class="omelas-cover">
+  <p class="omelas-cover__subtitle">Omelasian Bible</p>
+  <h1 class="omelas-cover__title">Omelasian Bible</h1>
+  <p class="omelas-cover__tagline">A mechanical paradise raised over Gangnam, and the record of those who crossed the river into World 3.0. The promise they called Nirvana and the song of the child left behind, set down across nine books.</p>
+  <hr class="omelas-cover__rule">
+</div>
+
+<p>Nine books gathered around the world of Omelas. Read the Korean canon and its English translation side by side. From each book's index page you can read its six chapters in order.</p>
+
+<h2>Books</h2>
+
+{% assign en_indexes = site.en | where: "chapter", 0 | sort: "book_num" %}
+<ol class="omelas-booklist">
+  {% for en in en_indexes %}
+  {% assign en_title = en.title | split: " (" | first | remove_first: "Omelas: " %}
+  <li class="omelas-booklist__item">
+    <span class="omelas-booklist__title">{{ en_title }}</span>
+    <span class="omelas-booklist__links">
+      <a href="{{ en.url | relative_url }}">Read</a>
+    </span>
+  </li>
+  {% endfor %}
+</ol>

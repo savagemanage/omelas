@@ -9,8 +9,6 @@ translation_key: "03-exodus/00-index"
 ---
 # Omelas: Exodus
 
-> Book Three of the Omelasian Bible. It follows the terms, characters, chronology, and synopsis 4.3 of the canonical story bible (canon/story-bible-ko.md).
-
 ## Synopsis
 
 The revelation is over, and now the leaving remains. Han Seorin, the Untransformed woman who has learned that baptism does not save a person but erases the original and seats a smiling copy in its place, flees from paradise on the night the white-robed attendant presses her doorbell. She goes to the Scientist Seo Myungju and the Evils, and a resistance that had been scattered takes shape around her. Seo Myungju and the Scientists gather proof that baptism is copying followed by extinction of the original, and try to carry that proof beyond the city.
