@@ -34,6 +34,29 @@
     "Malgun Gothic", Georgia, "Times New Roman", serif;
 }
 
+/*
+  Light theme: ink on parchment / vellum. A warm cream page with dark warm-ink
+  text and the same restrained aged-gold accent, deepened so it clears WCAG AA
+  on the pale ground. Kept quiet: no loud hues, same layout, same keep-all.
+  Contrast on --omelas-bg (hsl(40, 46%, 94%) ~= #f4ece0):
+    --omelas-fg        hsl(28, 30%, 16%) ~= #35291d  -> about 11.5:1 (AAA)
+    --omelas-fg-light  hsl(28, 22%, 30%)             -> about 6.4:1 (AA)
+    --omelas-fg-lighter hsl(28, 18%, 38%)            -> about 4.8:1 (AA)
+    --omelas-accent    hsl(35, 68%, 34%) ~= #92621c  -> about 4.6:1 (AA)
+*/
+html[data-theme="light"] {
+  --omelas-bg: hsl(40, 46%, 94%);
+  --omelas-bg-light: hsl(40, 40%, 90%);
+  --omelas-bg-lighter: hsl(40, 36%, 86%);
+
+  --omelas-fg: hsl(28, 30%, 16%);
+  --omelas-fg-light: hsl(28, 22%, 30%);
+  --omelas-fg-lighter: hsl(28, 18%, 38%);
+
+  --omelas-accent: hsl(35, 68%, 34%);
+  --omelas-accent-soft: hsla(35, 60%, 40%, 0.34);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -89,6 +112,58 @@ body {
 .omelas-header__nav a[aria-current="page"] {
   color: var(--omelas-accent);
   font-weight: 600;
+}
+
+/* Header actions cluster: holds the theme toggle (and any future controls). */
+.omelas-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+/*
+  Theme toggle: a quiet, keyboard-operable button that matches the header. It
+  carries a single sun/moon glyph and picks up the aged-gold accent on hover
+  and focus, staying restrained under both themes.
+*/
+.omelas-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--omelas-fg-light);
+  background: transparent;
+  border: 1px solid var(--omelas-accent-soft);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+
+.omelas-theme-toggle:hover {
+  color: var(--omelas-accent);
+  border-color: var(--omelas-accent);
+  background: hsla(41, 55%, 60%, 0.08);
+}
+
+.omelas-theme-toggle:focus-visible {
+  outline: 2px solid var(--omelas-accent);
+  outline-offset: 2px;
+  border-color: var(--omelas-accent);
+}
+
+/* Show the sun in dark mode (tap for light) and the moon in light mode. */
+.omelas-theme-toggle__glyph::before {
+  content: "\2600"; /* sun */
+}
+
+html[data-theme="light"] .omelas-theme-toggle__glyph::before {
+  content: "\263D"; /* first-quarter moon */
 }
 
 /* Main reading column. Comfortable measure so lines do not sprawl. */
@@ -510,4 +585,43 @@ blockquote p {
   .omelas-gate__door {
     max-width: none;
   }
+}
+
+/*
+  Light-theme surface overrides. A handful of blocks paint literal dark-tinted
+  gradients rather than reading the --omelas-* tokens; under the parchment theme
+  those are re-painted here as warm cream panels so the whole page stays light.
+  Layout, spacing, and the gilded accent are untouched.
+*/
+html[data-theme="light"] body {
+  background:
+    radial-gradient(120% 90% at 50% 0%, hsla(41, 50%, 55%, 0.10), transparent 55%),
+    var(--omelas-bg);
+}
+
+html[data-theme="light"] .omelas-cover {
+  background:
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 55%, 60%, 0.14), transparent 60%),
+    linear-gradient(180deg, hsl(40, 44%, 92%), hsl(40, 40%, 88%));
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
+}
+
+html[data-theme="light"] .omelas-gate__door {
+  background:
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 55%, 60%, 0.12), transparent 60%),
+    linear-gradient(180deg, hsl(40, 44%, 92%), hsl(40, 40%, 87%));
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
+}
+
+html[data-theme="light"] .omelas-gate__door:hover {
+  background:
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 58%, 55%, 0.20), transparent 60%),
+    linear-gradient(180deg, hsl(40, 46%, 90%), hsl(40, 42%, 85%));
+  box-shadow: 0 8px 24px hsla(30, 30%, 30%, 0.18),
+    inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
+}
+
+html[data-theme="light"] .omelas-langswitch__link:hover,
+html[data-theme="light"] .omelas-theme-toggle:hover {
+  background: hsla(35, 60%, 45%, 0.10);
 }

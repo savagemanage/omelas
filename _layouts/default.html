@@ -8,6 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap">
+  <script>
+    /* Anti-flash: apply the stored theme before the stylesheet paints. The
+       server renders data-theme="dark" as the no-JS fallback (this site is a
+       dark scripture experience by design), so we only override when a valid
+       stored value exists. Self-contained; localStorage wrapped in try/catch. */
+    (function () {
+      try {
+        var t = window.localStorage.getItem("omelas-theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="{{ '/assets/css/omelas.css' | relative_url }}">
 </head>
 <body>
@@ -20,5 +34,6 @@
   <footer class="omelas-footer">
     <p>오멜라스 성서 · Omelasian Bible</p>
   </footer>
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
 </body>
 </html>
