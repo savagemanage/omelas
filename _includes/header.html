@@ -20,6 +20,23 @@
       <span aria-current="true">{% if page.lang == 'ko' %}한국어{% else %}English{% endif %}</span>
       <a href="{{ counterpart | relative_url }}" hreflang="{{ other_lang }}">{{ other_label }}</a>
     </nav>
+    {% elsif page.is_home %}
+    {% comment %}
+      Home pages switch home-to-home: the Korean home links to the English home
+      and vice versa, using the page.home_counterpart permalink. This keeps a
+      reader on the landing page rather than sending them into the first book.
+    {% endcomment %}
+    {% if page.lang == 'ko' %}
+      {% assign other_lang = 'en' %}
+      {% assign other_label = 'English' %}
+    {% else %}
+      {% assign other_lang = 'ko' %}
+      {% assign other_label = '한국어' %}
+    {% endif %}
+    <nav class="omelas-header__nav" aria-label="언어 (Language)">
+      <span aria-current="true">{% if page.lang == 'ko' %}한국어{% else %}English{% endif %}</span>
+      <a href="{{ page.home_counterpart | relative_url }}" hreflang="{{ other_lang }}">{{ other_label }}</a>
+    </nav>
     {% else %}
     {% comment %}
       Home gate has no single counterpart, so we offer both entry links to the
