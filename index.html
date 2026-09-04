@@ -3,43 +3,25 @@ layout: default
 lang: ko
 title: 오멜라스 성서 (Omelasian Bible)
 ---
-<div class="omelas-cover omelas-cover--gate">
+<div class="omelas-cover">
   <p class="omelas-cover__subtitle">Omelasian Bible</p>
   <h1 class="omelas-cover__title">오멜라스 성서</h1>
   <p class="omelas-cover__tagline">강남 위에 세워진 기계 낙원, 그리고 세계 3.0의 강을 건넌 자들의 기록. 열반이라 불린 약속과 남겨진 아이의 노래를 아홉 권에 담았습니다.</p>
   <hr class="omelas-cover__rule">
 </div>
 
-<section class="omelas-gate" aria-labelledby="omelas-gate-heading">
-  <h2 id="omelas-gate-heading" class="omelas-gate__heading">언어 선택 <span class="omelas-gate__heading-en">Choose a language</span></h2>
-  <div class="omelas-gate__doors">
-    <a class="omelas-gate__door" data-lang="ko"
-       href="{{ '/ko/01-revelation/00-index/' | relative_url }}">
-      <span class="omelas-gate__door-lang">한국어</span>
-      <span class="omelas-gate__door-note">한국어 정본으로 읽기</span>
-    </a>
-    <a class="omelas-gate__door" data-lang="en"
-       href="{{ '/en/01-revelation/00-index/' | relative_url }}">
-      <span class="omelas-gate__door-lang">English</span>
-      <span class="omelas-gate__door-note">Read the English translation</span>
-    </a>
-  </div>
-  <p class="omelas-gate__continue" id="omelas-continue" hidden>
-    <a class="omelas-gate__continue-link" href="#"></a>
-  </p>
-</section>
-
 <p>오멜라스 세계를 다룬 아홉 권의 책을 모았습니다. 한국어 정본과 영어 번역을 나란히 읽을 수 있습니다. 각 책의 소개 페이지에서 여섯 개의 장을 차례로 읽을 수 있습니다.</p>
 
-<h2>책 목록 / Books</h2>
+<h2>책 목록</h2>
 
 {% assign ko_indexes = site.ko | where: "chapter", 0 | sort: "book_num" %}
 {% assign en_indexes = site.en | where: "chapter", 0 | sort: "book_num" %}
 <ol class="omelas-booklist">
   {% for ko in ko_indexes %}
   {% assign en = en_indexes | where: "book", ko.book | first %}
+  {% assign ko_title = ko.title | split: " (" | first %}
   <li class="omelas-booklist__item">
-    <span class="omelas-booklist__title">{{ ko.title }}</span>
+    <span class="omelas-booklist__title">{{ ko_title }}</span>
     <span class="omelas-booklist__links">
       <a href="{{ ko.url | relative_url }}">한국어</a>
       {% if en %}<a href="{{ en.url | relative_url }}">English</a>{% endif %}
@@ -47,40 +29,3 @@ title: 오멜라스 성서 (Omelasian Bible)
   </li>
   {% endfor %}
 </ol>
-
-<script>
-  // Progressive enhancement only: the two doors above are plain anchors and work
-  // with JavaScript disabled. This remembers the last chosen language and OFFERS
-  // (never forces) a "continue" link. No auto-redirect on load. Any URL used here
-  // is read from the door hrefs already resolved by relative_url, so the /omelas
-  // baseurl is always honored.
-  (function () {
-    var KEY = "omelas-lang";
-    var LABELS = { ko: "이어서 한국어로 읽기", en: "Continue in English" };
-    var doors = document.querySelectorAll(".omelas-gate__door");
-    var store = null;
-    try { store = window.localStorage; } catch (e) { return; }
-    if (!store) { return; }
-
-    var byLang = {};
-    Array.prototype.forEach.call(doors, function (door) {
-      var lang = door.getAttribute("data-lang");
-      byLang[lang] = door.getAttribute("href");
-      door.addEventListener("click", function () {
-        try { store.setItem(KEY, lang); } catch (e) {}
-      });
-    });
-
-    var chosen = null;
-    try { chosen = store.getItem(KEY); } catch (e) {}
-    if (chosen && byLang[chosen]) {
-      var wrap = document.getElementById("omelas-continue");
-      var link = wrap && wrap.querySelector(".omelas-gate__continue-link");
-      if (wrap && link) {
-        link.setAttribute("href", byLang[chosen]);
-        link.textContent = LABELS[chosen] || LABELS.ko;
-        wrap.hidden = false;
-      }
-    }
-  })();
-</script>
