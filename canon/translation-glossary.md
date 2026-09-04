@@ -77,6 +77,10 @@ so later books stay consistent.
 | 서말순 | Seo Malsun | The Untransformed mother who laments her baptized son (Psalms). |
 | 준서 | Junseo | Seo Malsun's baptized son (Psalms). |
 | 연우 | Yeonu | The young Scientist who defended baptism and later comes to the debate (Proverbs). |
+| 준호 | Junho | David's older brother, lost to the river in childhood (Infancy Gospel). |
+| 하도경 | Ha Dogyeong | The young Scientist sent up to Acrophyia; keeps Seo Myungju's monument (Acrophyia). |
+| 아이린 | Irene | The ascendant on the Acrophyia summit who has shed six layers (Acrophyia). |
+| 하나 | Hana | Irene's daughter, erased at the riverbank of baptism (Acrophyia). |
 
 ## Register and craft notes
 
