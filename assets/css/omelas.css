@@ -1,33 +1,35 @@
 /*
   Omelas theme stylesheet (Jekyll).
 
-  A slightly-dark scripture treatment for the Omelasian Bible: parchment in the
-  dark, ink on vellum. The background stays deep and near-black; the reading
-  column glows with a warm, candle-lit off-white so long-form Korean and English
-  read like a recited liturgy. A single restrained, aged-gold accent stands in
-  for gilding and rubrication. Comfortable serif measure, generous leading, a
-  drop-cap opening, and hushed verse blockquotes carry the scriptural register.
-  Dark by default; kept intentionally quiet so the prose leads.
+  A scripture treatment for the Omelasian Bible: ink on parchment. The page is a
+  warm cream vellum by default; the reading column carries dark warm-ink text so
+  long-form Korean and English read like a recited liturgy. A single restrained,
+  aged-gold accent stands in for gilding and rubrication. Comfortable serif
+  measure, generous leading, a drop-cap opening, and hushed verse blockquotes
+  carry the scriptural register. Light by default (the no-JS fallback), with a
+  deep dark scripture theme available as an opt-in override.
 
   Note: this file avoids the long dash character on purpose.
 */
 
 :root {
-  /* Dark base: deep, warm-tinted near-black surfaces (retained dark theme). */
-  --omelas-bg: hsl(30, 8%, 7%);
-  --omelas-bg-light: hsl(30, 8%, 10%);
-  --omelas-bg-lighter: hsl(30, 8%, 14%);
+  /* Light base: warm cream parchment / vellum surfaces (default theme). */
+  --omelas-bg: hsl(40, 46%, 94%);
+  --omelas-bg-light: hsl(40, 40%, 90%);
+  --omelas-bg-lighter: hsl(40, 36%, 86%);
 
-  /* Warm ink-on-vellum foreground: candle-lit parchment text on the dark bg. */
-  --omelas-fg: hsl(42, 44%, 90%);
-  --omelas-fg-light: hsla(40, 30%, 84%, 0.74);
-  /* Faintest tier: still the hushed, quiet voice, but raised to clear WCAG AA
-     (4.79:1 on --omelas-bg) so footer/muted small text stays legible. */
-  --omelas-fg-lighter: hsla(40, 25%, 80%, 0.58);
+  /* Dark warm-ink foreground on the pale ground.
+     Contrast on --omelas-bg (hsl(40, 46%, 94%) ~= #f4ece0):
+       --omelas-fg        hsl(28, 30%, 16%) ~= #35291d  -> about 11.5:1 (AAA)
+       --omelas-fg-light  hsl(28, 22%, 30%)             -> about 6.4:1 (AA)
+       --omelas-fg-lighter hsl(28, 18%, 38%)            -> about 4.8:1 (AA) */
+  --omelas-fg: hsl(28, 30%, 16%);
+  --omelas-fg-light: hsl(28, 22%, 30%);
+  --omelas-fg-lighter: hsl(28, 18%, 38%);
 
-  /* Restrained aged-gold / gilded accent (rubrication), AA-readable on the bg. */
-  --omelas-accent: hsl(41, 58%, 62%);
-  --omelas-accent-soft: hsla(41, 55%, 60%, 0.34);
+  /* Restrained aged-gold / gilded accent, deepened to clear WCAG AA on cream. */
+  --omelas-accent: hsl(35, 68%, 34%);
+  --omelas-accent-soft: hsla(35, 60%, 40%, 0.34);
 
   --omelas-measure: 44rem;
   --omelas-serif: "Noto Serif KR", "Nanum Myeongjo", "Apple SD Gothic Neo",
@@ -35,26 +37,23 @@
 }
 
 /*
-  Light theme: ink on parchment / vellum. A warm cream page with dark warm-ink
-  text and the same restrained aged-gold accent, deepened so it clears WCAG AA
-  on the pale ground. Kept quiet: no loud hues, same layout, same keep-all.
-  Contrast on --omelas-bg (hsl(40, 46%, 94%) ~= #f4ece0):
-    --omelas-fg        hsl(28, 30%, 16%) ~= #35291d  -> about 11.5:1 (AAA)
-    --omelas-fg-light  hsl(28, 22%, 30%)             -> about 6.4:1 (AA)
-    --omelas-fg-lighter hsl(28, 18%, 38%)            -> about 4.8:1 (AA)
-    --omelas-accent    hsl(35, 68%, 34%) ~= #92621c  -> about 4.6:1 (AA)
+  Dark theme: parchment in the dark, ink on vellum. Deep, warm-tinted near-black
+  surfaces with candle-lit off-white text and the same restrained aged-gold
+  accent. This is the opt-in override; the same layout and keep-all apply.
+  Contrast values are preserved from the original dark palette (WCAG AA), for
+  example --omelas-fg-lighter clears about 4.79:1 on --omelas-bg.
 */
-html[data-theme="light"] {
-  --omelas-bg: hsl(40, 46%, 94%);
-  --omelas-bg-light: hsl(40, 40%, 90%);
-  --omelas-bg-lighter: hsl(40, 36%, 86%);
+html[data-theme="dark"] {
+  --omelas-bg: hsl(30, 8%, 7%);
+  --omelas-bg-light: hsl(30, 8%, 10%);
+  --omelas-bg-lighter: hsl(30, 8%, 14%);
 
-  --omelas-fg: hsl(28, 30%, 16%);
-  --omelas-fg-light: hsl(28, 22%, 30%);
-  --omelas-fg-lighter: hsl(28, 18%, 38%);
+  --omelas-fg: hsl(42, 44%, 90%);
+  --omelas-fg-light: hsla(40, 30%, 84%, 0.74);
+  --omelas-fg-lighter: hsla(40, 25%, 80%, 0.58);
 
-  --omelas-accent: hsl(35, 68%, 34%);
-  --omelas-accent-soft: hsla(35, 60%, 40%, 0.34);
+  --omelas-accent: hsl(41, 58%, 62%);
+  --omelas-accent-soft: hsla(41, 55%, 60%, 0.34);
 }
 
 * {
@@ -67,9 +66,9 @@ html {
 
 body {
   margin: 0;
-  /* A faint warm vignette lifts the parchment column out of the dark. */
+  /* A faint warm vignette warms the cream parchment ground. */
   background:
-    radial-gradient(120% 90% at 50% 0%, hsla(41, 40%, 30%, 0.10), transparent 55%),
+    radial-gradient(120% 90% at 50% 0%, hsla(41, 50%, 55%, 0.10), transparent 55%),
     var(--omelas-bg);
   background-attachment: fixed;
   color: var(--omelas-fg);
@@ -148,7 +147,7 @@ body {
 .omelas-theme-toggle:hover {
   color: var(--omelas-accent);
   border-color: var(--omelas-accent);
-  background: hsla(41, 55%, 60%, 0.08);
+  background: hsla(35, 60%, 45%, 0.10);
 }
 
 .omelas-theme-toggle:focus-visible {
@@ -157,13 +156,13 @@ body {
   border-color: var(--omelas-accent);
 }
 
-/* Show the sun in dark mode (tap for light) and the moon in light mode. */
+/* Show the moon in light mode (tap for dark) and the sun in dark mode. */
 .omelas-theme-toggle__glyph::before {
-  content: "\2600"; /* sun */
+  content: "\263D"; /* first-quarter moon */
 }
 
-html[data-theme="light"] .omelas-theme-toggle__glyph::before {
-  content: "\263D"; /* first-quarter moon */
+html[data-theme="dark"] .omelas-theme-toggle__glyph::before {
+  content: "\2600"; /* sun */
 }
 
 /* Main reading column. Comfortable measure so lines do not sprawl. */
@@ -325,7 +324,7 @@ blockquote p {
 
 .omelas-langswitch__link:hover {
   border-color: var(--omelas-accent);
-  background: hsla(41, 55%, 60%, 0.08);
+  background: hsla(35, 60%, 45%, 0.10);
 }
 
 /* Generated chapter list on the book index. */
@@ -390,10 +389,10 @@ blockquote p {
   border-radius: 0.6rem;
   text-align: center;
   background:
-    radial-gradient(120% 140% at 50% 0%, hsla(41, 45%, 40%, 0.16), transparent 60%),
-    linear-gradient(180deg, hsl(30, 9%, 11%), hsl(30, 10%, 6%));
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 55%, 60%, 0.14), transparent 60%),
+    linear-gradient(180deg, hsl(40, 44%, 92%), hsl(40, 40%, 88%));
   border: 1px solid var(--omelas-accent-soft);
-  box-shadow: inset 0 1px 0 hsla(41, 60%, 78%, 0.08);
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
 }
 
 .omelas-cover .omelas-cover__title {
@@ -527,9 +526,9 @@ blockquote p {
   text-decoration: none;
   color: var(--omelas-fg);
   background:
-    radial-gradient(120% 140% at 50% 0%, hsla(41, 45%, 40%, 0.12), transparent 60%),
-    linear-gradient(180deg, hsl(30, 9%, 12%), hsl(30, 10%, 7%));
-  box-shadow: inset 0 1px 0 hsla(41, 60%, 78%, 0.08);
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 55%, 60%, 0.12), transparent 60%),
+    linear-gradient(180deg, hsl(40, 44%, 92%), hsl(40, 40%, 87%));
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
   transition: border-color 0.18s ease, transform 0.18s ease,
     box-shadow 0.18s ease, background 0.18s ease;
 }
@@ -552,10 +551,10 @@ blockquote p {
   border-color: var(--omelas-accent);
   transform: translateY(-2px);
   background:
-    radial-gradient(120% 140% at 50% 0%, hsla(41, 48%, 44%, 0.20), transparent 60%),
-    linear-gradient(180deg, hsl(30, 10%, 14%), hsl(30, 10%, 8%));
-  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.35),
-    inset 0 1px 0 hsla(41, 60%, 78%, 0.12);
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 58%, 55%, 0.20), transparent 60%),
+    linear-gradient(180deg, hsl(40, 46%, 90%), hsl(40, 42%, 85%));
+  box-shadow: 0 8px 24px hsla(30, 30%, 30%, 0.18),
+    inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
 }
 
 .omelas-gate__door:focus-visible {
@@ -588,40 +587,41 @@ blockquote p {
 }
 
 /*
-  Light-theme surface overrides. A handful of blocks paint literal dark-tinted
-  gradients rather than reading the --omelas-* tokens; under the parchment theme
-  those are re-painted here as warm cream panels so the whole page stays light.
-  Layout, spacing, and the gilded accent are untouched.
+  Dark-theme surface overrides. A handful of blocks paint literal gradients
+  rather than reading the --omelas-* tokens; the base rules paint them as warm
+  cream panels for the light default, and under the opt-in dark theme those are
+  re-painted here as deep, warm-tinted near-black panels so the whole page goes
+  dark. Layout, spacing, and the gilded accent are untouched.
 */
-html[data-theme="light"] body {
+html[data-theme="dark"] body {
   background:
-    radial-gradient(120% 90% at 50% 0%, hsla(41, 50%, 55%, 0.10), transparent 55%),
+    radial-gradient(120% 90% at 50% 0%, hsla(41, 40%, 30%, 0.10), transparent 55%),
     var(--omelas-bg);
 }
 
-html[data-theme="light"] .omelas-cover {
+html[data-theme="dark"] .omelas-cover {
   background:
-    radial-gradient(120% 140% at 50% 0%, hsla(41, 55%, 60%, 0.14), transparent 60%),
-    linear-gradient(180deg, hsl(40, 44%, 92%), hsl(40, 40%, 88%));
-  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 45%, 40%, 0.16), transparent 60%),
+    linear-gradient(180deg, hsl(30, 9%, 11%), hsl(30, 10%, 6%));
+  box-shadow: inset 0 1px 0 hsla(41, 60%, 78%, 0.08);
 }
 
-html[data-theme="light"] .omelas-gate__door {
+html[data-theme="dark"] .omelas-gate__door {
   background:
-    radial-gradient(120% 140% at 50% 0%, hsla(41, 55%, 60%, 0.12), transparent 60%),
-    linear-gradient(180deg, hsl(40, 44%, 92%), hsl(40, 40%, 87%));
-  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 45%, 40%, 0.12), transparent 60%),
+    linear-gradient(180deg, hsl(30, 9%, 12%), hsl(30, 10%, 7%));
+  box-shadow: inset 0 1px 0 hsla(41, 60%, 78%, 0.08);
 }
 
-html[data-theme="light"] .omelas-gate__door:hover {
+html[data-theme="dark"] .omelas-gate__door:hover {
   background:
-    radial-gradient(120% 140% at 50% 0%, hsla(41, 58%, 55%, 0.20), transparent 60%),
-    linear-gradient(180deg, hsl(40, 46%, 90%), hsl(40, 42%, 85%));
-  box-shadow: 0 8px 24px hsla(30, 30%, 30%, 0.18),
-    inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
+    radial-gradient(120% 140% at 50% 0%, hsla(41, 48%, 44%, 0.20), transparent 60%),
+    linear-gradient(180deg, hsl(30, 10%, 14%), hsl(30, 10%, 8%));
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.35),
+    inset 0 1px 0 hsla(41, 60%, 78%, 0.12);
 }
 
-html[data-theme="light"] .omelas-langswitch__link:hover,
-html[data-theme="light"] .omelas-theme-toggle:hover {
-  background: hsla(35, 60%, 45%, 0.10);
+html[data-theme="dark"] .omelas-langswitch__link:hover,
+html[data-theme="dark"] .omelas-theme-toggle:hover {
+  background: hsla(41, 55%, 60%, 0.08);
 }

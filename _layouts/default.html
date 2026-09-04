@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'ko' }}" data-theme="dark">
+<html lang="{{ page.lang | default: site.lang | default: 'ko' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap">
   <script>
     /* Anti-flash: apply the stored theme before the stylesheet paints. The
-       server renders data-theme="dark" as the no-JS fallback (this site is a
-       dark scripture experience by design), so we only override when a valid
-       stored value exists. Self-contained; localStorage wrapped in try/catch. */
+       server renders no data-theme attribute, so light is the default and the
+       no-JS fallback (the :root base is the light parchment palette); dark is
+       the opt-in override. We only setAttribute when a valid stored value
+       exists, so a stored 'dark' applies before paint with no flash, while
+       nothing stored leaves the page light. localStorage wrapped in try/catch. */
     (function () {
       try {
         var t = window.localStorage.getItem("omelas-theme");

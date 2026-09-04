@@ -1,14 +1,15 @@
 /*
-  Theme toggle: progressive enhancement for the dark/light switch.
+  Theme toggle: progressive enhancement for the light/dark switch.
 
   The head script has already applied any stored theme before paint, and the
-  server renders data-theme="dark" as the no-JS fallback. This handler wires the
-  header button: it reflects the current theme in the button's aria state, and
-  on click flips <html data-theme>, persists the choice to localStorage under
-  'omelas-theme' (a key distinct from the language gate's 'omelas-lang'), and
-  updates the aria label/pressed state. Dependency-free vanilla JS; every
-  localStorage touch is wrapped in try/catch so a locked-down browser degrades
-  to a still-usable dark page.
+  server renders no data-theme attribute so light is the default and the no-JS
+  fallback; dark is the opt-in override. This handler wires the header button:
+  it reflects the current theme in the button's aria state, and on click flips
+  <html data-theme>, persists the choice to localStorage under 'omelas-theme'
+  (a key distinct from the language gate's 'omelas-lang'), and updates the aria
+  label/pressed state. Dependency-free vanilla JS; every localStorage touch is
+  wrapped in try/catch so a locked-down browser degrades to a still-usable
+  light page.
 */
 (function () {
   var KEY = "omelas-theme";
@@ -18,20 +19,20 @@
   var root = document.documentElement;
 
   var LABELS = {
-    // Shown while in dark mode: tapping switches to light.
-    dark: "라이트 모드로 전환 (Switch to light theme)",
     // Shown while in light mode: tapping switches to dark.
-    light: "다크 모드로 전환 (Switch to dark theme)"
+    light: "다크 모드로 전환 (Switch to dark theme)",
+    // Shown while in dark mode: tapping switches to light.
+    dark: "라이트 모드로 전환 (Switch to light theme)"
   };
 
   function current() {
-    return root.getAttribute("data-theme") === "light" ? "light" : "dark";
+    return root.getAttribute("data-theme") === "dark" ? "dark" : "light";
   }
 
   function reflect(theme) {
-    // aria-pressed=true means the light theme is engaged.
-    btn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
-    btn.setAttribute("aria-label", LABELS[theme] || LABELS.dark);
+    // aria-pressed=true means the dark theme is engaged (light is the default).
+    btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+    btn.setAttribute("aria-label", LABELS[theme] || LABELS.light);
   }
 
   // Sync the button to whatever theme is actually applied (the head script may
