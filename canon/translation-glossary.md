@@ -74,6 +74,9 @@ so later books stay consistent.
 | 태식 | Taesik | An Evil who lost his wife to baptism (Exodus). |
 | 준 | Jun | A teenage Evil who lost his older brother (Exodus). |
 | 하윤 | Hayun | A young Engineer under Jung Dohyun (Exodus). |
+| 서말순 | Seo Malsun | The Untransformed mother who laments her baptized son (Psalms). |
+| 준서 | Junseo | Seo Malsun's baptized son (Psalms). |
+| 연우 | Yeonu | The young Scientist who defended baptism and later comes to the debate (Proverbs). |
 
 ## Register and craft notes
 
