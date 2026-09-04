@@ -9,8 +9,6 @@ translation_key: "07-new-testament/00-index"
 ---
 # Omelas: The New Testament
 
-> Book Seven of the Omelasian Bible. It follows the terms, characters, chronology, and synopsis 4.7 of the canonical story bible (canon/story-bible-ko.md). The climax and conclusion of the main pack (Books 1 through 6).
-
 ## Synopsis
 
 The door has opened. Since the night Jung Dohyun carved a single returning path into the heart of the pipeline, the river of Omelas has no longer been the river it once was. But a door being open and someone actually walking out through it are two different things. The New Testament is the story of that first step, and the story in which every arc of the main pack at last converges in one place.

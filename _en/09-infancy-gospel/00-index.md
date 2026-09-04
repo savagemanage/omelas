@@ -9,9 +9,6 @@ translation_key: "09-infancy-gospel/00-index"
 ---
 # Omelas: Infancy Gospel
 
-> Book Nine of the Omelasian Bible, the last book of the expansion pack. It follows the terms, characters, chronology, and synopsis 4.9 of the canonical story bible (canon/story-bible-ko.md).
-> It is a prehistory that meshes with Genesis (Book Two) without contradiction, and sets a resonant full stop upon the whole series.
-
 ## Synopsis
 
 It turns time back to before even Genesis, and into the seams of Genesis. This book lays two childhoods over each other. One is the young David of a certain winter in the Old Calendar, before he first feared death. The other is his daughter Sea, the first child in Omelas to be laid upon the bed of baptism after her father crossed the river.
