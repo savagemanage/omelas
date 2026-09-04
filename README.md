@@ -1,6 +1,6 @@
 # 오멜라스 성서 (Omelasian Bible)
 
-**오멜라스 성서(Omelasian Bible)** 는 어슐러 K. 르 귄의 단편 "오멜라스를 떠나는 사람들(The Ones Who Walk Away from Omelas)"에서 영감을 받은, 완결된 아홉 권짜리 한국어 라이트 노벨입니다. 어둡고 사색적인 종교-디스토피아 정조의 SF로, 한국어 정본 산문과 그에 나란히 놓인 영어 번역을 함께 정적 사이트로 공개합니다.
+**오멜라스 성서(Omelasian Bible)** 는 어슐러 K. 르 귄의 단편 "오멜라스를 떠나는 사람들(The Ones Who Walk Away from Omelas)"에서 영감을 받은, 완결된 아홉 권짜리 한국어/영어 이중 언어 성서풍 라이트 노벨입니다. 어둡고 사색적인 종교-디스토피아 정조의 SF로, 한국어 정본 산문과 그에 나란히 놓인 영어 번역을 함께 정적 사이트로 공개합니다.
 
 - 온라인으로 읽기: [https://savagemanage.github.io/omelas/](https://savagemanage.github.io/omelas/)
 
