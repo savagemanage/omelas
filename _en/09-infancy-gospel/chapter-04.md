@@ -1,0 +1,12 @@
+---
+lang: "en"
+layout: "chapter"
+book: "09-infancy-gospel"
+book_num: 9
+chapter: 4
+title: "Chapter 4"
+translation_key: "09-infancy-gospel/chapter-04"
+---
+<!-- TODO(FEAT-002..004): replace with the faithful English translation. -->
+
+Translation in progress.

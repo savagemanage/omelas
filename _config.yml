@@ -1,0 +1,74 @@
+title: 오멜라스 성서 (Omelasian Bible)
+description: 오멜라스 세계를 다룬 아홉 권의 책. 한국어 정본과 영어 번역을 나란히 읽는 사이트.
+
+# Project Pages site lives at https://savagemanage.github.io/omelas/
+# so url is the origin and baseurl is the subpath. Every internal link must
+# use the relative_url filter (or site.baseurl) to resolve under /omelas.
+url: https://savagemanage.github.io
+baseurl: /omelas
+
+# Dark, book-matched theme is the default. page.lang drives the <html lang>.
+lang: ko
+
+plugins:
+  - jekyll-sitemap
+
+# Bilingual architecture.
+#
+# Two output collections carry the reading trees:
+#   - ko  -> /ko/<slug>/...  (Korean canonical prose)
+#   - en  -> /en/<slug>/...  (English translation)
+#
+# Rationale: keeping ko and en as sibling collections means books/*.md stays
+# byte-identical on disk (the generator copies bodies into _ko, never edits the
+# sources), both languages are first-class output trees, and a shared
+# translation_key (e.g. "01-revelation/chapter-01") in each document's
+# front-matter links a Korean page to its English counterpart. The layout uses
+# that key to render the language switch and side-by-side navigation.
+collections:
+  ko:
+    output: true
+    permalink: /ko/:path/
+  en:
+    output: true
+    permalink: /en/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: ko
+    values:
+      lang: ko
+      layout: chapter
+  - scope:
+      path: ""
+      type: en
+    values:
+      lang: en
+      layout: chapter
+
+# Book index documents (00-index) override layout to "book" in their own
+# front-matter, written by the generator and the English stub tree.
+
+# Content that is source prose, canon, or tracking, not part of the built site.
+exclude:
+  - books/
+  - canon/
+  - scripts/
+  - docs/
+  - site/
+  - ".agents/"
+  - README.md
+  - PROJECT.md
+  - DEPLOY.md
+  - ideation.md
+  - page-1.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - "*.py"
+
+# Markdown / rendering
+markdown: kramdown
+kramdown:
+  input: GFM

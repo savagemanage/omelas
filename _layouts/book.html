@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% comment %}
+  Book index. Renders the book's own prose (title + synopsis) from content,
+  then a generated, correct chapter list so navigation resolves under baseurl.
+{% endcomment %}
+{% if page.lang == 'ko' %}
+  {% assign chapters = site.ko | where: "book", page.book | where_exp: "d", "d.chapter > 0" | sort: "chapter" %}
+  {% assign chapter_heading = '장 목록' %}
+  {% assign home_label = '표지로 돌아가기' %}
+{% else %}
+  {% assign chapters = site.en | where: "book", page.book | where_exp: "d", "d.chapter > 0" | sort: "chapter" %}
+  {% assign chapter_heading = 'Chapters' %}
+  {% assign home_label = 'Back to the cover' %}
+{% endif %}
+
+{% include language-switch.html %}
+
+<div class="omelas-prose">
+  {{ content }}
+</div>
+
+<nav class="omelas-chapters" aria-label="{{ chapter_heading }}">
+  <h2 class="omelas-chapters__heading">{{ chapter_heading }}</h2>
+  <ol class="omelas-chapters__list">
+    {% for ch in chapters %}
+    <li><a href="{{ ch.url | relative_url }}">{{ ch.title }}</a></li>
+    {% endfor %}
+  </ol>
+</nav>
+
+<p class="omelas-backhome"><a href="{{ '/' | relative_url }}">{{ home_label }}</a></p>
