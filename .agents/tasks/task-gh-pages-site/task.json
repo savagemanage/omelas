@@ -1,0 +1,19 @@
+{
+  "task_id": "task-gh-pages-site",
+  "task_description": "Configure the Omelasian Bible repo (savagemanage/omelas) so it can be deployed to GitHub Pages, with all 9 Korean-language books and their 54 chapters browsable from the site. Approach: MkDocs + Material theme (renders Korean, resolves relative .md links natively, needs no front-matter so prose stays untouched), built and deployed via a GitHub Actions Pages workflow. Do not modify novel prose or English originals; do not push or open PRs (orchestrator publishes; workflow files go via PR).",
+  "status": "completed",
+  "feature_order": ["FEAT-001", "FEAT-002", "FEAT-003"],
+  "blocked_reason": null,
+  "review": {
+    "verdict": "APPROVED",
+    "file": ".agents/tasks/task-gh-pages-site/2026-09-03-130057-review.md",
+    "notes": "v1 review APPROVED. Four non-blocking nits: (1) dead exclude_docs block in mkdocs.yml; (2) hand-maintained nav can drift if chapters are added; (3) DEPLOY.md PR-delivery note (accurate for the orchestrator's publish flow); (4) canon/ intentionally not published (it is supporting material, not a book). None are correctness issues; left as-is to avoid churn."
+  },
+  "verification": {
+    "build": "pass",
+    "tests": "n/a (content repo; verification is a --strict site build)",
+    "test_quality": "n/a",
+    "docker_build": "skipped (no Dockerfile; static site)",
+    "summary": "python3 scripts/build_docs_tree.py && python3 -m mkdocs build --strict exits 0, output dir ./site. Verified: 54 chapter pages + 9 book index pages built, site/index.html has <html lang=\"ko\"> and canonical https://savagemanage.github.io/omelas/, home page links to all 9 book indexes, relative .md chapter links rewritten to working URLs (e.g. ../chapter-01/). git status confirms no prose/English originals modified; no em dashes in new files."
+  }
+}
