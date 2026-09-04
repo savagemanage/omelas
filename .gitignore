@@ -1,2 +1,13 @@
+# Generated build artifacts
 /site
 /docs
+
+# Task-tracking directory (not part of the published work)
+.agents/
+
+# Python cruft
+__pycache__/
+*.pyc
+
+# OS cruft
+.DS_Store
