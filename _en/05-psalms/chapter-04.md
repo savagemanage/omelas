@@ -4,7 +4,7 @@ layout: "chapter"
 book: "05-psalms"
 book_num: 5
 chapter: 4
-title: "Chapter 4"
+title: "Chapter 4: The Psalm from Across the River"
 translation_key: "05-psalms/chapter-04"
 ---
 # Chapter 4: The Psalm from Across the River

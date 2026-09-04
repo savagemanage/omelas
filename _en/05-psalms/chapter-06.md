@@ -4,7 +4,7 @@ layout: "chapter"
 book: "05-psalms"
 book_num: 5
 chapter: 6
-title: "Chapter 6"
+title: "Chapter 6: The Song of the Beast and the Child"
 translation_key: "05-psalms/chapter-06"
 ---
 # Chapter 6: The Song of the Beast and the Child

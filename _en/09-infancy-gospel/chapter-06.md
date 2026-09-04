@@ -4,7 +4,7 @@ layout: "chapter"
 book: "09-infancy-gospel"
 book_num: 9
 chapter: 6
-title: "Chapter 6"
+title: "Chapter 6: The Last Winter, the First Spring"
 translation_key: "09-infancy-gospel/chapter-06"
 ---
 # Chapter 6: The Last Winter, the First Spring

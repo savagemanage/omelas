@@ -4,7 +4,7 @@ layout: "chapter"
 book: "06-proverbs"
 book_num: 6
 chapter: 5
-title: "Chapter 5"
+title: "Chapter 5: The Collapsed Evangelist's Question"
 translation_key: "06-proverbs/chapter-05"
 ---
 # Chapter 5: The Collapsed Evangelist's Question

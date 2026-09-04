@@ -4,7 +4,7 @@ layout: "chapter"
 book: "06-proverbs"
 book_num: 6
 chapter: 2
-title: "Chapter 2"
+title: "Chapter 2: The Parable of the Waterdrop That Crossed the River"
 translation_key: "06-proverbs/chapter-02"
 ---
 # Chapter 2: The Parable of the Waterdrop That Crossed the River

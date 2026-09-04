@@ -4,7 +4,7 @@ layout: "chapter"
 book: "07-new-testament"
 book_num: 7
 chapter: 5
-title: "Chapter 5"
+title: "Chapter 5: David's Choice"
 translation_key: "07-new-testament/chapter-05"
 ---
 # Chapter 5: David's Choice

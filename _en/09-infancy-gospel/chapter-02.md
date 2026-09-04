@@ -4,7 +4,7 @@ layout: "chapter"
 book: "09-infancy-gospel"
 book_num: 9
 chapter: 2
-title: "Chapter 2"
+title: "Chapter 2: The Name That Is Not Erased"
 translation_key: "09-infancy-gospel/chapter-02"
 ---
 # Chapter 2: The Name That Is Not Erased

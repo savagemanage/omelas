@@ -4,7 +4,7 @@ layout: "chapter"
 book: "08-acrophyia"
 book_num: 8
 chapter: 2
-title: "Chapter 2"
+title: "Chapter 2: The Ones Who Shed"
 translation_key: "08-acrophyia/chapter-02"
 ---
 # Chapter 2: The Ones Who Shed

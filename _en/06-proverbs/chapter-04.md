@@ -4,7 +4,7 @@ layout: "chapter"
 book: "06-proverbs"
 book_num: 6
 chapter: 4
-title: "Chapter 4"
+title: "Chapter 4: A Hand That Can Drop"
 translation_key: "06-proverbs/chapter-04"
 ---
 # Chapter 4: A Hand That Can Drop

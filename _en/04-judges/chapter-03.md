@@ -4,7 +4,7 @@ layout: "chapter"
 book: "04-judges"
 book_num: 4
 chapter: 3
-title: "Chapter 3"
+title: "Chapter 3: The Fact on the Witness Stand"
 translation_key: "04-judges/chapter-03"
 ---
 # Chapter 3: The Fact on the Witness Stand

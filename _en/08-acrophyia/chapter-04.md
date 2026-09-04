@@ -4,7 +4,7 @@ layout: "chapter"
 book: "08-acrophyia"
 book_num: 8
 chapter: 4
-title: "Chapter 4"
+title: "Chapter 4: The Rumor from Below"
 translation_key: "08-acrophyia/chapter-04"
 ---
 # Chapter 4: The Rumor from Below

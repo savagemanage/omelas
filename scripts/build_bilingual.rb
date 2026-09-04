@@ -9,7 +9,11 @@
 # Contract:
 #   * NEVER modifies books/*.md. The Korean bodies are copied byte-for-byte and
 #     YAML front-matter is PREPENDED to the copy written into _ko/.
-#   * Idempotent: re-running fully regenerates _ko/ and _en/ from source.
+#   * Idempotent for _ko/: re-running fully regenerates _ko/ from source.
+#   * NEVER clobbers hand-written English bodies. When an _en document already
+#     exists, its body is preserved and only its front-matter is refreshed; the
+#     English title is derived from the translated body H1 when present. Only
+#     missing _en documents are seeded with a placeholder body.
 #   * No em dash (U+2014) is introduced anywhere.
 #
 # The generated _ko/ and _en/ trees are committed to the repo so the Pages
@@ -89,10 +93,25 @@ def clean_tree(dir)
   FileUtils.mkdir_p(dir)
 end
 
+# Strip a leading YAML front-matter block ("---\n...\n---\n") from a document,
+# returning just the body. If there is no front-matter, the text is returned
+# unchanged.
+def strip_front_matter(text)
+  return text unless text.start_with?("---\n") || text.start_with?("---\r\n")
+
+  # Match the opening fence, the front-matter lines, the closing fence, and any
+  # single trailing newline after the closing fence.
+  m = text.match(/\A---\r?\n.*?\r?\n---\r?\n/m)
+  m ? text[m.end(0)..] || "" : text
+end
+
 abort("books/ not found at #{BOOKS}") unless Dir.exist?(BOOKS)
 
+# _ko/ is fully regenerated from source every run. _en/ is NOT wiped: it holds
+# hand-written English translations. Existing _en bodies are preserved and only
+# their front-matter is refreshed below.
 clean_tree(KO_DIR)
-clean_tree(EN_DIR)
+FileUtils.mkdir_p(EN_DIR)
 
 slugs = BOOK_TITLES_EN.keys
 ko_count = 0
@@ -138,9 +157,24 @@ slugs.each do |slug|
     File.write(File.join(ko_book_dir, filename), ko_fm + body, encoding: "UTF-8")
     ko_count += 1
 
-    # --- English stub document: full front-matter, placeholder body ---
+    # --- English document ---
+    # Preserve any hand-written translation body. Only seed a placeholder when
+    # the _en document does not yet exist. Front-matter is always refreshed, and
+    # the English title is derived from the translated body H1 when available so
+    # navigation labels and <title> match the real chapter name (never the stub).
+    en_path = File.join(en_book_dir, filename)
+    en_body =
+      if File.exist?(en_path)
+        strip_front_matter(File.read(en_path, encoding: "UTF-8"))
+      else
+        "<!-- TODO: replace with the faithful English translation. -->\n\nTranslation in progress.\n"
+      end
+
+    en_h1 = parse_h1(en_body)
     en_title =
-      if chapter.zero?
+      if en_h1 && !en_h1.empty?
+        en_h1
+      elsif chapter.zero?
         "Omelas: #{en_title_book}"
       else
         "Chapter #{chapter}"
@@ -155,8 +189,7 @@ slugs.each do |slug|
       "title" => en_title,
       "translation_key" => key
     )
-    en_placeholder = "<!-- TODO(FEAT-002..004): replace with the faithful English translation. -->\n\nTranslation in progress.\n"
-    File.write(File.join(en_book_dir, filename), en_fm + en_placeholder, encoding: "UTF-8")
+    File.write(en_path, en_fm + en_body, encoding: "UTF-8")
     en_count += 1
   end
 end

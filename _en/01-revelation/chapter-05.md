@@ -4,7 +4,7 @@ layout: "chapter"
 book: "01-revelation"
 book_num: 1
 chapter: 5
-title: "Chapter 5"
+title: "Chapter 5: The Awakened"
 translation_key: "01-revelation/chapter-05"
 ---
 # Chapter 5: The Awakened

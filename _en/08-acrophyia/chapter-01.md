@@ -4,7 +4,7 @@ layout: "chapter"
 book: "08-acrophyia"
 book_num: 8
 chapter: 1
-title: "Chapter 1"
+title: "Chapter 1: The Highest Layer"
 translation_key: "08-acrophyia/chapter-01"
 ---
 # Chapter 1: The Highest Layer

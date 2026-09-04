@@ -4,7 +4,7 @@ layout: "chapter"
 book: "08-acrophyia"
 book_num: 8
 chapter: 5
-title: "Chapter 5"
+title: "Chapter 5: The Last Layer"
 translation_key: "08-acrophyia/chapter-05"
 ---
 # Chapter 5: The Last Layer

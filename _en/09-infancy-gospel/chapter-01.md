@@ -4,7 +4,7 @@ layout: "chapter"
 book: "09-infancy-gospel"
 book_num: 9
 chapter: 1
-title: "Chapter 1"
+title: "Chapter 1: The Boy and the River"
 translation_key: "09-infancy-gospel/chapter-01"
 ---
 # Chapter 1: The Boy and the River

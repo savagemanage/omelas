@@ -4,7 +4,7 @@ layout: "chapter"
 book: "05-psalms"
 book_num: 5
 chapter: 5
-title: "Chapter 5"
+title: "Chapter 5: The Robot-God's Elegy"
 translation_key: "05-psalms/chapter-05"
 ---
 # Chapter 5: The Robot-God's Elegy

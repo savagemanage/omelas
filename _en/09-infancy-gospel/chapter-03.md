@@ -4,7 +4,7 @@ layout: "chapter"
 book: "09-infancy-gospel"
 book_num: 9
 chapter: 3
-title: "Chapter 3"
+title: "Chapter 3: The Room the Father Left"
 translation_key: "09-infancy-gospel/chapter-03"
 ---
 # Chapter 3: The Room the Father Left

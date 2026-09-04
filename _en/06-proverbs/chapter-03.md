@@ -4,7 +4,7 @@ layout: "chapter"
 book: "06-proverbs"
 book_num: 6
 chapter: 3
-title: "Chapter 3"
+title: "Chapter 3: The Supporter's Visit"
 translation_key: "06-proverbs/chapter-03"
 ---
 # Chapter 3: The Supporter's Visit

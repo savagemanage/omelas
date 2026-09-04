@@ -4,7 +4,7 @@ layout: "chapter"
 book: "03-exodus"
 book_num: 3
 chapter: 3
-title: "Chapter 3"
+title: "Chapter 3: The Weight of Proof"
 translation_key: "03-exodus/chapter-03"
 ---
 # Chapter 3: The Weight of Proof

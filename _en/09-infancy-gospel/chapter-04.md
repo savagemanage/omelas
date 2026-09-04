@@ -4,7 +4,7 @@ layout: "chapter"
 book: "09-infancy-gospel"
 book_num: 9
 chapter: 4
-title: "Chapter 4"
+title: "Chapter 4: The First White Robe"
 translation_key: "09-infancy-gospel/chapter-04"
 ---
 # Chapter 4: The First White Robe

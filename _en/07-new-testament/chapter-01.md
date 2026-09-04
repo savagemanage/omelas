@@ -4,7 +4,7 @@ layout: "chapter"
 book: "07-new-testament"
 book_num: 7
 chapter: 1
-title: "Chapter 1"
+title: "Chapter 1: Before the Open Door"
 translation_key: "07-new-testament/chapter-01"
 ---
 # Chapter 1: Before the Open Door

@@ -4,7 +4,7 @@ layout: "chapter"
 book: "05-psalms"
 book_num: 5
 chapter: 3
-title: "Chapter 3"
+title: "Chapter 3: A Cold Prayer"
 translation_key: "05-psalms/chapter-03"
 ---
 # Chapter 3: A Cold Prayer

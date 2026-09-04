@@ -4,7 +4,7 @@ layout: "chapter"
 book: "03-exodus"
 book_num: 3
 chapter: 1
-title: "Chapter 1"
+title: "Chapter 1: The Doorbell"
 translation_key: "03-exodus/chapter-01"
 ---
 # Chapter 1: The Doorbell

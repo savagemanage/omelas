@@ -4,7 +4,7 @@ layout: "chapter"
 book: "04-judges"
 book_num: 4
 chapter: 6
-title: "Chapter 6"
+title: "Chapter 6: The Verdict"
 translation_key: "04-judges/chapter-06"
 ---
 # Chapter 6: The Verdict

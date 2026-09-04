@@ -4,7 +4,7 @@ layout: "chapter"
 book: "09-infancy-gospel"
 book_num: 9
 chapter: 5
-title: "Chapter 5"
+title: "Chapter 5: The Child Who Did Not Cross the River"
 translation_key: "09-infancy-gospel/chapter-05"
 ---
 # Chapter 5: The Child Who Did Not Cross the River

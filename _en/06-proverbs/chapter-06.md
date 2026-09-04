@@ -4,7 +4,7 @@ layout: "chapter"
 book: "06-proverbs"
 book_num: 6
 chapter: 6
-title: "Chapter 6"
+title: "Chapter 6: The Step the Engineer Takes"
 translation_key: "06-proverbs/chapter-06"
 ---
 # Chapter 6: The Step the Engineer Takes

@@ -4,7 +4,7 @@ layout: "chapter"
 book: "07-new-testament"
 book_num: 7
 chapter: 3
-title: "Chapter 3"
+title: "Chapter 3: Two Riverbanks"
 translation_key: "07-new-testament/chapter-03"
 ---
 # Chapter 3: Two Riverbanks

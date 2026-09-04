@@ -4,7 +4,7 @@ layout: "book"
 book: "07-new-testament"
 book_num: 7
 chapter: 0
-title: "Omelas: New Testament"
+title: "Omelas: The New Testament"
 translation_key: "07-new-testament/00-index"
 ---
 # Omelas: The New Testament

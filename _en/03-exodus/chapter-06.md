@@ -4,7 +4,7 @@ layout: "chapter"
 book: "03-exodus"
 book_num: 3
 chapter: 6
-title: "Chapter 6"
+title: "Chapter 6: The Ones Who Walk Away"
 translation_key: "03-exodus/chapter-06"
 ---
 # Chapter 6: The Ones Who Walk Away
