@@ -20,26 +20,31 @@ Rules:
 | Korean | English (canonical) | Notes |
 |--------|---------------------|-------|
 | 오멜라스 | Omelas | Both the universe and the city-state at its center; centered on Korea, especially Gangnam. |
-| 월드 3.0 | World 3.0 | The network David invented; the backbone and de facto temple of the Mechanical Utopia. |
+| 세계 3.0 | World 3.0 | The network David invented; the backbone and de facto temple of the Mechanical Utopia. |
 | 세례 | baptism | Religious name for the rite that moves an Untransformed body and mind into a machine. |
 | 변환 | transformation | Technical name for the same rite. "baptism" and "transformation" are two names for one thing. |
 | 미변환자 | the Untransformed | People still in the flesh, not yet baptized. |
-| 굿즈 | the Goods | Those who believe becoming a machine is Nirvana; they lead the baptism. Also called the Gods. |
+| 선인 | the Goods | Those who believe becoming a machine is Nirvana; they lead the baptism. Also called the Gods. |
 | 신들 | the Gods | Alternate name for the Goods. |
 | 엔지니어 | the Engineers | Technicians who build and operate World 3.0 and the baptism pipeline. |
 | 전도사 | the Evangelists | Those who preach and win hearts so people desire baptism (the Gangnam street sermon). |
-| 이블즈 | the Evils | A slur the Goods give the resistance. Singular resistance member: rendered within "the Evils". |
+| 악인 | the Evils | A slur the Goods give the resistance. Singular resistance member: rendered within "the Evils". |
 | 깨어 있는 자들 | the Awakened | What the Evils call themselves. |
 | 과학자 | the Scientists | Researchers proving facts against the baptism; usually allied with the Evils. |
 | 동물들 | the Animals | Beings outside the doctrine of transformation; the one uncorrupted gaze in Omelas. |
 | 기계 유토피아 | Mechanical Utopia | Omelas's social order built around World 3.0. |
 | 영년 / 원년 | Year Zero | The year David's migration and World 3.0 were completed; origin of the Omelas calendar. |
 | 구력 | the Old Calendar | The age before Year Zero. |
-| 니르바나 / 열반 | Nirvana | The ultimate state the Goods believe is reached by becoming a machine. |
+| 열반 | Nirvana | The ultimate state the Goods believe is reached by becoming a machine. |
 | 아크로피아 | Acrophyia | The highest layer of World 3.0 and the frontier sect-zone named after it. |
 | 떠나는 자들 | the Ones Who Walk Away | Those who choose to leave Omelas; a direct homage to Le Guin. |
 | 창건 지성 | the founding intelligence | David's title inside World 3.0. |
 | 재림 관찰 | Second Coming observation | The rare re-projection of a migrated mind into a temporary body terminal. |
+
+Note on the Korean canonical terms: 선인 = 善人 (the Goods) and 악인 = 惡人 (the Evils);
+these are the fixed Korean labels, while the English renderings stay "the Goods" and
+"the Evils". 다윗 is the Korean biblical spelling of David, and the English rendering
+stays "David". 세계 3.0 keeps the English "World 3.0", and 열반 keeps the English "Nirvana".
 
 ## The recurring sermon refrain
 
@@ -60,7 +65,7 @@ This single rendering is used identically everywhere the refrain appears.
 | 노아 | Noa | The robot-Good who would become human. |
 | 미르 | Mir | Seorin's dog (the Animals). |
 | 별이 | Byeori | The dog of the childhood era (a separate dog from Mir). |
-| 데이비드 | David | The founding intelligence of World 3.0. |
+| 다윗 | David | The founding intelligence of World 3.0. |
 
 ## Minor / supporting names introduced in the prose
 
