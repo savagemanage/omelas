@@ -30,6 +30,10 @@ DOCS_DIR = REPO_ROOT / "docs"
 LINKS = {
     "docs_home.md": "index.md",
     "books": "books",
+    # The custom stylesheet is referenced via extra_css in mkdocs.yml. Because
+    # docs_dir is this symlink tree, the assets directory must be exposed here
+    # or `mkdocs build --strict` fails on the missing extra_css file.
+    "assets": "assets",
 }
 
 

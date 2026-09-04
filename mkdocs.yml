@@ -8,21 +8,32 @@ use_directory_urls: true
 theme:
   name: material
   language: ko
+  font:
+    text: Noto Serif KR
+    code: Noto Sans Mono
   features:
     - navigation.sections
     - navigation.top
+    - navigation.footer
     - content.code.copy
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/weather-night
-        name: 다크 모드로 전환
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: black
+      accent: deep purple
       toggle:
         icon: material/weather-sunny
         name: 라이트 모드로 전환
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로 전환
+
+extra_css:
+  - assets/omelas.css
 
 markdown_extensions:
   - toc:
