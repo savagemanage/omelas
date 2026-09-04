@@ -1,4 +1,4 @@
-<div class="omelas-cover" markdown="1">
+<div class="omelas-cover">
 <p class="omelas-cover__subtitle">Omelasian Bible</p>
 <h1 class="omelas-cover__title">오멜라스 성서</h1>
 <p class="omelas-cover__tagline">강남 위에 세워진 기계 낙원, 그리고 월드 3.0의 강을 건넌 자들의 기록. 열반이라 불린 약속과 남겨진 아이의 노래를 아홉 권에 담았습니다.</p>
