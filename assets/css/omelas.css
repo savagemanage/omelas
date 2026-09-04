@@ -21,7 +21,9 @@
   /* Warm ink-on-vellum foreground: candle-lit parchment text on the dark bg. */
   --omelas-fg: hsl(42, 44%, 90%);
   --omelas-fg-light: hsla(40, 30%, 84%, 0.74);
-  --omelas-fg-lighter: hsla(40, 24%, 78%, 0.40);
+  /* Faintest tier: still the hushed, quiet voice, but raised to clear WCAG AA
+     (4.79:1 on --omelas-bg) so footer/muted small text stays legible. */
+  --omelas-fg-lighter: hsla(40, 25%, 80%, 0.58);
 
   /* Restrained aged-gold / gilded accent (rubrication), AA-readable on the bg. */
   --omelas-accent: hsl(41, 58%, 62%);
