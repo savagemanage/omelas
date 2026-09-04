@@ -307,28 +307,6 @@ blockquote p {
   opacity: 0.85;
 }
 
-/* Language switch control. */
-.omelas-langswitch {
-  margin: 0 0 1.75rem;
-  font-size: 0.9rem;
-  text-align: right;
-}
-
-.omelas-langswitch__link {
-  display: inline-block;
-  padding: 0.3rem 0.85rem;
-  border: 1px solid var(--omelas-accent-soft);
-  border-radius: 0.4rem;
-  text-decoration: none;
-  color: var(--omelas-accent);
-  letter-spacing: 0.03em;
-}
-
-.omelas-langswitch__link:hover {
-  border-color: var(--omelas-accent);
-  background: hsla(35, 60%, 45%, 0.10);
-}
-
 /* Generated chapter list on the book index. */
 .omelas-chapters {
   margin-top: 2.5rem;
@@ -623,7 +601,6 @@ html[data-theme="dark"] .omelas-gate__door:hover {
     inset 0 1px 0 hsla(41, 60%, 78%, 0.12);
 }
 
-html[data-theme="dark"] .omelas-langswitch__link:hover,
 html[data-theme="dark"] .omelas-theme-toggle:hover {
   background: hsla(41, 55%, 60%, 0.08);
 }

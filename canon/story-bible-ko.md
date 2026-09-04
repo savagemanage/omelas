@@ -2,7 +2,7 @@
 
 > 이 문서는 "오멜라스 성서(Omelasian Bible)" 9권 전체 시리즈의 최상위 정본(canon)이다.
 > 이후 집필되는 모든 권(FEAT-002 ~ FEAT-010)은 이 바이블의 용어, 인물, 연표, 세계관, 권별 시놉시스, 분량 배분을 반드시 따른다.
-> 원어 영문 정본은 저장소 루트의 README.md, ideation.md, page-1.md 이며, 그 한국어 번역본은 canon/README-ko.md, canon/ideation-ko.md, canon/page-1-ko.md 이다.
+> 원어 영문 정본은 canon/README-en.md, canon/ideation-en.md, canon/page-1-en.md 로 보존되어 있으며, 그 한국어 번역본은 canon/README-ko.md, canon/ideation-ko.md, canon/page-1-ko.md 이다. 저장소 루트의 README.md 는 이제 오픈소스 저장소의 첫 화면 역할을 하는 한국어 프로젝트 소개 문서이다.
 > 표기 규칙: 한국어가 원본이자 정본 산문이며, 그 옆에 영어 번역을 나란히 둔다. 번역은 한국어 정본을 바꾸지 않는다. 배경은 한국, 특히 강남을 중심축으로 삼는다. 어떤 파일에서도 긴 줄표(엠 대시) 문자를 쓰지 않는다.
 
 ---
@@ -166,4 +166,4 @@
 5. 톤은 르 귄식 도덕적 모호함이다. 세례를 베푸는 자도 진심이며, 떠나는 자도 완전한 정답을 갖지 않는다.
 6. 어떤 파일에서도 긴 줄표(엠 대시) 문자를 쓰지 않는다.
 7. 분량은 4장의 배분표를 따른다. 정본 척도는 순수 한글 글자 수 기준 약 450자 = 1페이지이며, 권당 약 12,300~12,800자, 전체 약 250페이지(약 112,500자 이상)이다.
-8. 영문 정본(README.md, ideation.md, page-1.md)은 절대 수정하지 않는다. 그 한국어 번역본은 canon/ 아래에만 둔다. 한국어 정본 산문의 영어 번역은 그 옆에 나란히 두며, 원본 한국어를 바꾸지 않는다.
+8. 원어 영문 정본은 canon/ 아래에 canon/README-en.md, canon/ideation-en.md, canon/page-1-en.md 로 보존한다. 그 한국어 번역본도 canon/ 아래(canon/README-ko.md, canon/ideation-ko.md, canon/page-1-ko.md)에 둔다. 저장소 루트의 README.md 는 오픈소스 저장소의 첫 화면인 한국어 프로젝트 소개 문서이다. 한국어 정본 산문의 영어 번역은 그 옆에 나란히 두며, 원본 한국어를 바꾸지 않는다.
